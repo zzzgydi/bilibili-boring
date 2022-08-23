@@ -1,0 +1,13 @@
+.App {
+  position: fixed;
+  right: 1.5%;
+  bottom: 1.5%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.App > button {
+  padding: 8px 16px;
+  border: 1px solid #606c6e;
+  border-radius: 4px;
+}
