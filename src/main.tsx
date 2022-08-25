@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import ReactDOM from "react-dom/client";
+import Entry from "./components/entry";
 
 const injectDom = (() => {
   const app = document.createElement("div");
@@ -8,9 +8,8 @@ const injectDom = (() => {
   return app;
 })();
 
-ReactDOM.render(
+ReactDOM.createRoot(injectDom).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  injectDom
+    <Entry />
+  </React.StrictMode>
 );

@@ -1,25 +1,13 @@
-import { popVideoItem, refreshVideos } from "./storage";
-
-export const currentUrl = window.location.href;
-
-export const isBoringYes = currentUrl.includes("boring=yes");
-
-export const isVideoPage = currentUrl.includes("bilibili.com/video/");
+import { SVideoListLen } from "./storage";
+import { isVideoPage, isBoringYes } from "./utils";
+import { videoManager } from "./video";
 
 let onended: any = null;
 
-export async function nextVideo() {
-  const item = popVideoItem();
-  if (!item) return refreshVideos();
-
-  history.pushState("", "", getVideoUrl(item));
-  window.location.reload();
-}
-
 export async function playVideo() {
   if (!isVideoPage) {
-    const item = popVideoItem();
-    if (!item) return refreshVideos();
+    const item = videoManager.next();
+    if (!item) return videoManager.refresh();
 
     window.location.href = getVideoUrl(item);
     return;
@@ -39,7 +27,15 @@ export async function playVideo() {
 
   if (onended) video?.removeEventListener("ended", onended);
   if (video) {
-    onended = nextVideo;
+    onended = () => {
+      const item = videoManager.next();
+      if (!item) return videoManager.refresh();
+      // 2s后自动播放下一个视频
+      setTimeout(() => {
+        history.pushState("", "", getVideoUrl(item));
+        window.location.reload();
+      }, 2500);
+    };
     video.addEventListener("ended", onended);
   }
 
@@ -60,5 +56,12 @@ export function setupDefault() {
   if (isVideoPage && isBoringYes) {
     // history.replaceState("", "", currentUrl.replace("boring=yes", "boring=no"));
     setTimeout(() => playVideo(), 1500);
+    return;
+  }
+
+  if (SVideoListLen.get() < 10) {
+    videoManager.refresh();
+  } else {
+    videoManager.latestList();
   }
 }
