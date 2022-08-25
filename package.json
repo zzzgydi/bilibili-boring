@@ -1,7 +1,9 @@
 {
   "name": "bilibili-boring",
   "version": "0.0.1",
+  "author": "zzzgydi",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
