@@ -17,6 +17,49 @@ export function shuffleList(list: any[]) {
   return list;
 }
 
+export function parseDate(timestamp: number): string {
+  if (!timestamp) return "-";
+
+  const date = new Date(timestamp * 1000);
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const day = date.getDate().toString().padStart(2, "0");
+
+  return `${month}-${day}`;
+}
+
+export function parseDuration(duration: number): string {
+  if (!duration) return "-";
+
+  const hour = Math.floor(duration / 3600);
+  const mins = Math.floor((duration - hour * 60) / 60);
+  const secs = duration % 60;
+
+  const minsStr = mins.toString().padStart(2, "0");
+  const secsStr = secs.toString().padStart(2, "0");
+
+  if (hour > 0) return `${hour}:${minsStr}:${secsStr}`;
+  return `${minsStr}:${secsStr}`;
+}
+
+export async function sleep(wait: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, wait));
+}
+
+export async function querySelector<T extends Element>(
+  selector: string,
+  retryCount: number = 5,
+  retryInterval: number = 100
+): Promise<T | null> {
+  let dom: T | null = null;
+
+  while (!dom && retryCount-- >= 0) {
+    dom = document.querySelector<T>(selector);
+    await sleep(retryInterval);
+  }
+
+  return dom;
+}
+
 export function transformVideoItem(data: any): IVideoItem | null {
   if (!data) return null;
 

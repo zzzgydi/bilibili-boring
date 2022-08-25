@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { setupDefault, playVideo } from "@/services/play";
 import { useMixedHotkey } from "@/hooks/use-hotkey";
 import VideoList from "./video-list";

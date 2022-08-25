@@ -2,9 +2,11 @@ import { useEffect } from "react";
 
 export const useHotkey = (key: string, callback: () => void) => {
   useEffect(() => {
-    const handle = (e: any) => {
+    const handle = (e: KeyboardEvent) => {
       if (e.key === key) {
         callback();
+        e.preventDefault();
+        e.stopPropagation();
       }
     };
 
@@ -24,7 +26,6 @@ export const useMixedHotkey = (
     let timer: any;
 
     const handler = (e: KeyboardEvent) => {
-      if (e.composedPath().length > 4) return;
       if (e.key !== key) return;
 
       if (timer) {
@@ -37,6 +38,9 @@ export const useMixedHotkey = (
           onOnce();
         }, 250);
       }
+
+      e.preventDefault();
+      e.stopPropagation();
     };
 
     document.addEventListener("keydown", handler);

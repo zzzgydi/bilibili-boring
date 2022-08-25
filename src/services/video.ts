@@ -58,6 +58,17 @@ class VideoManager {
     return null;
   }
 
+  // 尝试获取下一个
+  // 如果不存在就刷新
+  async tryNext(retryCount = 5): Promise<IVideoItem | null> {
+    let item = this.next();
+    while (!item && retryCount-- > 0) {
+      await this.refresh();
+      item = this.next();
+    }
+    return item;
+  }
+
   // 添加更多视频到storage里
   async refresh() {
     const { data } = await axios
