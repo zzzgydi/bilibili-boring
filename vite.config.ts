@@ -15,9 +15,15 @@ export default defineConfig({
     monkey({
       entry: "src/main.tsx",
       userscript: {
-        icon: "https://vitejs.dev/logo.svg",
+        name: "Bilibili Boring",
+        author: "zzzgydi",
+        description: "用于无聊刷b站",
         namespace: "zzzgydi/bilibili-boring",
+        homepage: "https://github.com/zzzgydi/bilibili-boring",
+        homepageURL: "https://github.com/zzzgydi/bilibili-boring",
+        icon: "https://vitejs.dev/logo.svg",
         match: ["*://*.bilibili.com/*"],
+        exclude: ["*://api.bilibili.com/*", "*://api.*.bilibili.com/*"],
       },
       build: {
         // externalGlobals: {
