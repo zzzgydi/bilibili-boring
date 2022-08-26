@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useHotkeys } from "@/hooks/use-hotkeys";
-import { autoPlayVideo } from "@/services/play";
-import VideoPage from "./video";
+import { autoPlayVideo, playVideoItem } from "@/services/play";
+import { videoManager } from "@/services/video";
+import { isVideoPage } from "@/services/utils";
 import SettingPage from "./setting";
+import VideoPage from "./video";
 
 const Entry = () => {
   const [video, setVideo] = useState(false);
@@ -21,6 +23,15 @@ const Entry = () => {
     onDouble: () => {
       if (!setting) autoPlayVideo();
     }, // 双击
+  });
+
+  // 跳过当前视频
+  useHotkeys(["Delete", "Meta+Backspace", "Ctrl+Backspace"], {
+    enabled: !video && !setting && isVideoPage,
+    onClick: async () => {
+      const item = await videoManager.tryNext(5);
+      playVideoItem(item?.bvid!);
+    },
   });
 
   return (
