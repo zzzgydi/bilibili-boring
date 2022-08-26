@@ -4,6 +4,7 @@
 // @version      0.0.1
 // @author       zzzgydi
 // @description  用于无聊刷b站
+// @license      MIT
 // @icon         https://vitejs.dev/logo.svg
 // @homepage     https://github.com/zzzgydi/bilibili-boring
 // @homepageURL  https://github.com/zzzgydi/bilibili-boring
@@ -12,7 +13,7 @@
 // @exclude      *://api.*.bilibili.com/*
 // ==/UserScript==
 
-// use vite-plugin-monkey@2.1.1 at 2022-08-25T18:09:36.898Z
+// use vite-plugin-monkey@2.1.1 at 2022-08-26T13:01:32.432Z
 
 ;(({ css = "" }) => {
   const style = document.createElement("style");
@@ -20,7 +21,7 @@
   style.dataset.source = "vite-plugin-monkey";
   document.head.appendChild(style);
 })({
-  "css": "._container_xkjfw_1 {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0));\n  z-index: 1000001;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n._leftBtn_xkjfw_14,\n._rightBtn_xkjfw_15 {\n  position: relative;\n  width: 30px;\n  height: 50px;\n  cursor: pointer;\n  overflow: hidden;\n}\n._leftBtn_xkjfw_14::before,\n._rightBtn_xkjfw_15::before {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-top: 5px solid #ccc;\n  border-right: 5px solid #ccc;\n  top: 50%;\n  left: -10px;\n  transform-origin: top;\n  transform: rotate(45deg) translateY(-50%);\n}\n\n._leftBtn_xkjfw_14::before {\n  left: 10px;\n  border-top: 5px solid #ccc;\n  border-left: 5px solid #ccc;\n  border-right: none;\n  transform: rotate(-45deg) translateY(-50%);\n}\n\n._setting_xkjfw_44 {\n  position: absolute;\n  top: 136px;\n  right: 50px;\n  color: #fff;\n  font-size: 14px;\n  z-index: 2;\n}\n._setting_xkjfw_44 > button {\n  color: #000;\n  padding: 4px 6px;\n  font-size: 14px;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background: #fdfdfd;\n  overflow: hidden;\n  margin-left: 16px;\n}\n._setting_xkjfw_44 > button:active, ._setting_xkjfw_44 > button:focus {\n  background: #fff;\n  border-color: #aaa;\n  box-shadow: rgba(255, 255, 255, 0.75) 0px 0px 0px 3px;\n}\n\n._content_xkjfw_68 {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  min-height: 300px;\n  padding: 200px 50px;\n  box-sizing: border-box;\n  display: grid;\n  grid-template-columns: repeat(6, minmax(0, 1fr));\n  gap: 2%;\n}\n\n._item_xkjfw_80 {\n  width: 100%;\n  cursor: pointer;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  border-radius: 4px;\n  margin-bottom: 6px;\n  aspect-ratio: 16/9;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 > img {\n  object-fit: contain;\n  width: 100%;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 svg {\n  width: 14px;\n  height: 14px;\n  margin-right: 2px;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 ._top_xkjfw_101,\n._item_xkjfw_80 ._imgWrap_xkjfw_84 ._bottom_xkjfw_102 {\n  position: absolute;\n  left: 0;\n  right: 0;\n  height: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  font-size: 14px;\n  color: #fff;\n  box-sizing: content-box;\n  line-height: 1;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 ._top_xkjfw_101 {\n  top: 0;\n  padding: 2px 6px 6px;\n  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 ._top_xkjfw_101 > span:first-child {\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 ._top_xkjfw_101 > span:last-child {\n  flex: none;\n}\n._item_xkjfw_80 ._imgWrap_xkjfw_84 ._bottom_xkjfw_102 {\n  bottom: 0;\n  padding: 10px 6px 2px;\n  background: linear-gradient(to top, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n  justify-content: flex-end;\n}\n._item_xkjfw_80 ._title_xkjfw_134 {\n  display: -webkit-box;\n  width: 100%;\n  font-size: 16px;\n  color: #fff;\n  -webkit-line-clamp: 2;\n  line-height: 1.2;\n  max-height: 2.4em;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n}\n._item_xkjfw_80:hover {\n  box-shadow: rgba(255, 255, 255, 0.75) 0px 0px 0px 3px;\n}"
+  "css": "._item_12wyh_1 {\n  width: 100%;\n  cursor: pointer;\n}\n._item_12wyh_1:focus {\n  outline: auto;\n}\n._item_12wyh_1:hover {\n  outline: auto;\n}\n\n._imgWrap_12wyh_12 {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  border-radius: 4px;\n  margin-bottom: 6px;\n  aspect-ratio: 16/9;\n}\n._imgWrap_12wyh_12 > img {\n  object-fit: contain;\n  width: 100%;\n}\n._imgWrap_12wyh_12 svg {\n  width: 14px;\n  height: 14px;\n  margin-right: 2px;\n}\n._imgWrap_12wyh_12 ._top_12wyh_29,\n._imgWrap_12wyh_12 ._bottom_12wyh_30 {\n  position: absolute;\n  left: 0;\n  right: 0;\n  height: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  font-size: 14px;\n  color: #fff;\n  box-sizing: content-box;\n  line-height: 1;\n}\n._imgWrap_12wyh_12 ._top_12wyh_29 {\n  top: 0;\n  padding: 2px 6px 6px;\n  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n}\n._imgWrap_12wyh_12 ._top_12wyh_29 > span:first-child {\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n._imgWrap_12wyh_12 ._top_12wyh_29 > span:last-child {\n  flex: none;\n}\n._imgWrap_12wyh_12 ._bottom_12wyh_30 {\n  bottom: 0;\n  padding: 10px 6px 2px;\n  background: linear-gradient(to top, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n  justify-content: flex-end;\n}\n\n._title_12wyh_63 {\n  display: -webkit-box;\n  width: 100%;\n  font-size: 14px;\n  color: #fff;\n  -webkit-line-clamp: 2;\n  line-height: 1.2;\n  max-height: 2.4em;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n}._container_1lx5e_1 {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0));\n  z-index: 1000001;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n._leftBtn_1lx5e_14,\n._rightBtn_1lx5e_15 {\n  position: relative;\n  width: 30px;\n  height: 50px;\n  cursor: pointer;\n  overflow: hidden;\n}\n._leftBtn_1lx5e_14:focus,\n._rightBtn_1lx5e_15:focus {\n  outline: auto;\n}\n._leftBtn_1lx5e_14::before,\n._rightBtn_1lx5e_15::before {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-top: 5px solid #ccc;\n  border-right: 5px solid #ccc;\n  top: 50%;\n  left: -10px;\n  transform-origin: top;\n  transform: rotate(45deg) translateY(-50%);\n}\n\n._leftBtn_1lx5e_14::before {\n  left: 10px;\n  border-top: 5px solid #ccc;\n  border-left: 5px solid #ccc;\n  border-right: none;\n  transform: rotate(-45deg) translateY(-50%);\n}\n\n._setting_1lx5e_48 {\n  position: absolute;\n  top: 136px;\n  right: 50px;\n  color: #fff;\n  font-size: 14px;\n  z-index: 2;\n}\n._setting_1lx5e_48 > button {\n  color: #000;\n  padding: 4px 6px;\n  font-size: 14px;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background: #fdfdfd;\n  overflow: hidden;\n  margin-left: 16px;\n}\n._setting_1lx5e_48 > button:active, ._setting_1lx5e_48 > button:focus {\n  background: #fff;\n  border-color: #aaa;\n  outline: auto;\n}\n\n._content_1lx5e_72 {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  min-height: 300px;\n  padding: 200px 50px;\n  box-sizing: border-box;\n  display: grid;\n  grid-template-columns: repeat(6, minmax(0, 1fr));\n  gap: 2%;\n}._setting_rqdad_1 {\n  position: fixed;\n  width: 90%;\n  max-width: 400px;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 1000002;\n  background: #fff;\n  padding: 20px 30px;\n}\n\n._textarea_rqdad_13 {\n  width: 100%;\n  border: 1px solid #666;\n  padding: 1px;\n  box-sizing: content-box;\n}\n._textarea_rqdad_13 > textarea {\n  width: 100%;\n  resize: none;\n  border: none;\n  outline: none;\n  margin: 1px 0;\n}"
 });
 
 var __defProp = Object.defineProperty;
@@ -7548,45 +7549,80 @@ var __publicField = (obj, key, value) => {
     client.createRoot = m$1.createRoot;
     client.hydrateRoot = m$1.hydrateRoot;
   }
-  function storage(key, defaultValue, validate) {
-    return {
-      set: (data2) => {
-        try {
-          if (data2 == null) {
-            localStorage.removeItem(key);
-            return;
-          }
-          localStorage.setItem(key, JSON.stringify(data2));
-        } catch (e) {
-          console.error(e);
-        }
-      },
-      get: () => {
-        try {
-          const dataStr = localStorage.getItem(key);
-          if (!dataStr)
-            return defaultValue;
-          const data2 = JSON.parse(dataStr);
-          if (!validate || validate && validate(data2))
-            return data2;
-        } catch (e) {
-          console.log(e);
-        }
-        return defaultValue;
-      }
-    };
+  function matchHotkeys(key, event) {
+    const target = event.target || event.srcElement;
+    const tagName = target == null ? void 0 : target.tagName;
+    if (target.isContentEditable || tagName === "INPUT" || tagName === "SELECT" || tagName === "TEXTAREA") {
+      return false;
+    }
+    function help(key2) {
+      if (!key2)
+        return false;
+      const keys = key2.split("+").map((e) => e.trim()).filter(Boolean);
+      const others = ["Alt", "Ctrl", "Meta", "Shift"];
+      const target2 = keys.find((e) => !others.includes(e));
+      return (target2 === event.key || target2 === event.code) && keys.includes("Alt") === event.altKey && keys.includes("Ctrl") === event.ctrlKey && keys.includes("Meta") === event.metaKey && keys.includes("Shift") === event.shiftKey;
+    }
+    if (!key || key.length === 0)
+      return false;
+    if (typeof key === "string")
+      return help(key);
+    return key.some(help);
   }
-  const SVideoList = storage(
-    "boring-list",
-    [],
-    Array.isArray
-  );
-  const SVideoListLen = storage("boring-list-len", 0);
-  const SVideoHistoryList = storage(
-    "boring-history",
-    [],
-    Array.isArray
-  );
+  const useHotkeys = (key, options) => {
+    const { once = false, enabled: ready = true } = options;
+    const fnRef = react.exports.useRef(options);
+    fnRef.current = options;
+    react.exports.useEffect(() => {
+      if (!ready || !key || Array.isArray(key) && key.length === 0)
+        return;
+      if (!options.onClick && !options.onDouble)
+        return;
+      let handler;
+      const handleRemove = () => {
+        document.removeEventListener("keydown", handler);
+      };
+      if (typeof options.onDouble === "function") {
+        let timer;
+        handler = (e) => {
+          var _a;
+          if (!matchHotkeys(key, e))
+            return;
+          const opt = fnRef.current;
+          if (timer) {
+            clearTimeout(timer);
+            timer = null;
+            opt.onDouble();
+          } else {
+            timer = setTimeout(() => {
+              var _a2;
+              timer = null;
+              (_a2 = opt.onClick) == null ? void 0 : _a2.call(opt);
+            }, (_a = opt.interval) != null ? _a : 250);
+          }
+          e.preventDefault();
+          e.stopPropagation();
+          if (once)
+            handleRemove();
+        };
+      } else {
+        handler = (e) => {
+          var _a, _b;
+          if (!matchHotkeys(key, e))
+            return;
+          (_b = (_a = fnRef.current).onClick) == null ? void 0 : _b.call(_a);
+          e.preventDefault();
+          e.stopPropagation();
+          if (once)
+            handleRemove();
+        };
+      }
+      document.addEventListener("keydown", handler);
+      return () => {
+        document.removeEventListener("keydown", handler);
+      };
+    }, [key, once, ready]);
+  };
   const currentUrl = window.location.href;
   const isBoringYes = currentUrl.includes("boring=yes");
   const isVideoPage = currentUrl.includes("bilibili.com/video/");
@@ -9032,48 +9068,186 @@ var __publicField = (obj, key, value) => {
     module.exports = axios$2.exports;
   })(axios$3);
   const axios = /* @__PURE__ */ getDefaultExportFromCjs(axios$3.exports);
+  const oprList = "=,==,!=,>,<,>=,<=,has".split(",").join("|");
+  const oprRegex = new RegExp(`\\s*(\\w+)\\s+(${oprList})\\s+(.+)`, "i");
+  function generateFilters(text) {
+    const rules = text.split("\n").map((e) => e.trim()).filter(Boolean);
+    return rules.map((rule) => {
+      const result = rule.match(oprRegex);
+      if (!result)
+        return;
+      const [_, key, opr, val = ""] = result;
+      return {
+        key: key.toLocaleLowerCase(),
+        opr: opr.toLocaleLowerCase(),
+        val: val.trim()
+      };
+    }).filter(Boolean);
+  }
+  function executeFilter(item2, filter) {
+    var _a, _b, _c, _d, _e;
+    const { key, opr, val } = filter;
+    function stringMatch(lh2, rh2) {
+      if (["=", ">=", "<=", "=="].includes(opr))
+        return lh2 == rh2;
+      if (opr === "!=")
+        return lh2 != rh2;
+      if (opr === "has")
+        return lh2.toString().includes(val.toString());
+      return false;
+    }
+    function booleanMatch(lh2, rh2) {
+      lh2 = lh2 == "false" || lh2 == "0" ? false : !!lh2;
+      rh2 = rh2 == "false" || rh2 == "0" ? false : !!rh2;
+      if (["=", ">=", "<=", "=="].includes(opr))
+        return lh2 == rh2;
+      if (opr === "!=")
+        return lh2 != rh2;
+      return false;
+    }
+    function numberMatch(lh2, rh2) {
+      lh2 = +lh2;
+      rh2 = +rh2;
+      switch (opr) {
+        case "=":
+        case "==":
+          return lh2 == rh2;
+        case "!=":
+          return lh2 != rh2;
+        case ">":
+          return lh2 > rh2;
+        case "<":
+          return lh2 < rh2;
+        case ">=":
+          return lh2 >= rh2;
+        case "<=":
+          return lh2 <= rh2;
+        default:
+          return false;
+      }
+    }
+    if (key === "bvid" || key === "id")
+      return stringMatch(item2.bvid, val);
+    if (key === "title")
+      return stringMatch(item2.title, val);
+    if (key === "up" || key === "name")
+      return stringMatch((_a = item2.owner) == null ? void 0 : _a.name, val);
+    if (key === "upid" || key === "mid")
+      return stringMatch((_b = item2.owner) == null ? void 0 : _b.mid, val);
+    if (key === "view")
+      return numberMatch((_c = item2.stat) == null ? void 0 : _c.view, val);
+    if (key === "like")
+      return numberMatch((_d = item2.stat) == null ? void 0 : _d.like, val);
+    if (key === "danmaku")
+      return numberMatch((_e = item2.stat) == null ? void 0 : _e.danmaku, val);
+    if (key === "duration")
+      return numberMatch(item2.duration, val);
+    if (key === "pubdate")
+      return numberMatch(item2.pubdate, val);
+    if (key === "follow" || key === "followed" || key === "is_followed")
+      return booleanMatch(item2.is_followed, val);
+    return false;
+  }
+  function storage(key, options) {
+    const {
+      defaultValue,
+      isJSON = true,
+      cacheTime = 0,
+      validate,
+      stringify,
+      parse
+    } = options != null ? options : {};
+    let cache;
+    let updated = 0;
+    return {
+      set: (data2) => {
+        cache = data2;
+        updated = Date.now();
+        try {
+          if (data2 == null) {
+            localStorage.removeItem(key);
+            return;
+          }
+          const value = isJSON ? JSON.stringify(data2) : stringify ? stringify(data2) : data2;
+          localStorage.setItem(key, value);
+        } catch (e) {
+          console.error(e);
+        }
+      },
+      get: () => {
+        if (cacheTime > 0 && Date.now() - updated < cacheTime) {
+          return cache;
+        }
+        try {
+          updated = Date.now();
+          const dataStr = localStorage.getItem(key);
+          if (!dataStr)
+            return cache = defaultValue;
+          const data2 = isJSON ? JSON.parse(dataStr) : parse ? parse(dataStr) : dataStr;
+          if (!validate || validate && validate(data2))
+            return cache = data2;
+        } catch (e) {
+          console.log(e);
+        }
+        return cache = defaultValue;
+      }
+    };
+  }
+  const SVideoList = storage("boring-list", {
+    defaultValue: [],
+    cacheTime: 1e4,
+    validate: Array.isArray
+  });
+  const SVideoHistoryList = storage("boring-history", {
+    defaultValue: [],
+    cacheTime: 1e4,
+    validate: Array.isArray
+  });
+  const SWhitelistText = storage("boring-whitelist", {
+    defaultValue: "",
+    isJSON: false,
+    cacheTime: 1e4
+  });
+  const SBlacklistText = storage("boring-blacklist", {
+    defaultValue: "",
+    isJSON: false,
+    cacheTime: 1e4
+  });
   class VideoManager {
     constructor() {
       __publicField(this, "_freshCount", 1);
-      __publicField(this, "_list", []);
+      __publicField(this, "_whiteText", "");
+      __publicField(this, "_blackText", "");
+      __publicField(this, "_whitelist", []);
+      __publicField(this, "_blacklist", []);
+      this._whiteText = SWhitelistText.get();
+      this._blackText = SBlacklistText.get();
+      this._whitelist = generateFilters(this._whiteText);
+      this._blacklist = generateFilters(this._blackText);
+      const list = SVideoList.get().filter(
+        (i) => i && i.bvid && this.rulesFilter(i)
+      );
+      SVideoList.set(list);
+      if (list.length < 12)
+        this.refresh();
     }
-    get list() {
-      return this._list;
-    }
-    latestList() {
-      this._list = SVideoList.get();
-      return this._list;
+    async update() {
+      const list = SVideoList.get();
+      if (list.length < 12)
+        await this.refresh();
+      return SVideoList.get();
     }
     next(index = 0) {
       index = Math.max(0, Math.floor(index));
-      if (SVideoListLen.get() > index) {
-        const list = SVideoList.get().filter((e) => e && e.bvid);
+      const list = this.list;
+      if (list.length > index) {
         const [item2] = list.splice(index, 1);
         if (item2) {
           const historyList = SVideoHistoryList.get();
           historyList.unshift(item2.bvid);
-          SVideoHistoryList.set(historyList);
+          SVideoHistoryList.set([...historyList]);
         }
         SVideoList.set(list);
-        SVideoListLen.set(list.length);
-        this._list = list;
-        return item2;
-      }
-      return null;
-    }
-    nextByBvid(bvid) {
-      if (bvid && SVideoListLen.get() > 0) {
-        const list = SVideoList.get().filter((e) => e && e.bvid);
-        const index = list.findIndex((i) => i.bvid === bvid);
-        const [item2] = list.splice(index, 1);
-        if (item2) {
-          const historyList = SVideoHistoryList.get();
-          historyList.unshift(item2.bvid);
-          SVideoHistoryList.set(historyList);
-        }
-        SVideoList.set(list);
-        SVideoListLen.set(list.length);
-        this._list = list;
         return item2;
       }
       return null;
@@ -9085,6 +9259,21 @@ var __publicField = (obj, key, value) => {
         item2 = this.next();
       }
       return item2;
+    }
+    getByBvid(bvid) {
+      const list = this.list;
+      if (bvid && list.length > 0) {
+        const index = list.findIndex((i) => i.bvid === bvid);
+        const [item2] = list.splice(index, 1);
+        if (item2) {
+          const historyList = SVideoHistoryList.get();
+          historyList.unshift(item2.bvid);
+          SVideoHistoryList.set(historyList);
+        }
+        SVideoList.set(list);
+        return item2;
+      }
+      return null;
     }
     async refresh() {
       const { data: data2 } = await axios.get("https://api.bilibili.com/x/web-interface/index/top/feed/rcmd", {
@@ -9102,14 +9291,41 @@ var __publicField = (obj, key, value) => {
       }).then((res) => res.data);
       if (!data2.item.length)
         return;
-      const oldList = SVideoList.get().filter((e) => e && e.bvid);
+      const list = this.list;
       const historyList = SVideoHistoryList.get();
-      const itemSet = new Set(oldList.map((e) => e.bvid).concat(historyList));
-      const items = data2.item.map(transformVideoItem).filter((e) => e && e.bvid && !itemSet.has(e.bvid));
-      const newList = shuffleList(oldList.concat(items));
-      SVideoList.set(newList);
-      SVideoListLen.set(newList.length);
-      this._list = newList;
+      const itemSet = new Set(list.map((e) => e.bvid).concat(historyList));
+      const items = data2.item.map(transformVideoItem).filter((e) => e && e.bvid && !itemSet.has(e.bvid)).filter(this.rulesFilter.bind(this));
+      SVideoList.set(shuffleList(list.concat(items)));
+    }
+    get list() {
+      return SVideoList.get().filter((e) => e && e.bvid);
+    }
+    get whiteText() {
+      return this._whiteText;
+    }
+    get blackText() {
+      return this._blackText;
+    }
+    setWhiteText(value) {
+      if (this._whiteText === value)
+        return;
+      SWhitelistText.set(value);
+      this._whiteText = value;
+      this._whitelist = generateFilters(this._whiteText);
+    }
+    setBlackText(value) {
+      if (this._blackText === value)
+        return;
+      SBlacklistText.set(value);
+      this._blackText = value;
+      this._blacklist = generateFilters(this._blackText);
+    }
+    rulesFilter(item2) {
+      if (!item2)
+        return false;
+      if (this._whitelist.some((f2) => executeFilter(item2, f2)))
+        return true;
+      return !this._blacklist.some((f2) => executeFilter(item2, f2));
     }
   }
   const videoManager = new VideoManager();
@@ -9161,7 +9377,7 @@ var __publicField = (obj, key, value) => {
     const { protocol } = window.location;
     return `${protocol}//www.bilibili.com/video/${item2.bvid}?boring=yes`;
   }
-  async function playVideo() {
+  async function autoPlayVideo() {
     if (!isVideoPage) {
       const next = await videoManager.tryNext(5);
       if (next) {
@@ -9172,7 +9388,15 @@ var __publicField = (obj, key, value) => {
     setupFullScreen();
     setupVideoEnd();
   }
-  function playVideoItem(item2) {
+  function setupDefault() {
+    if (isVideoPage && isBoringYes) {
+      history.replaceState("", "", currentUrl.replace("boring=yes", "boring=no"));
+      setTimeout(() => autoPlayVideo(), 1500);
+      return;
+    }
+  }
+  function playVideoItem(bvid) {
+    const item2 = videoManager.getByBvid(bvid);
     if (!item2)
       return;
     if (!isVideoPage) {
@@ -9182,72 +9406,30 @@ var __publicField = (obj, key, value) => {
       location.reload();
     }
   }
-  function setupDefault() {
-    if (isVideoPage && isBoringYes) {
-      history.replaceState("", "", currentUrl.replace("boring=yes", "boring=no"));
-      setTimeout(() => playVideo(), 1500);
-      return;
-    }
-    if (SVideoListLen.get() < 10) {
-      videoManager.refresh();
-    }
-  }
-  const useHotkey = (key, callback) => {
-    react.exports.useEffect(() => {
-      const handle = (e) => {
-        if (e.key === key) {
-          callback();
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      };
-      document.addEventListener("keydown", handle);
-      return () => {
-        document.removeEventListener("keydown", handle);
-      };
-    }, [key]);
+  const usePage = (list, pageSize) => {
+    const [index, setIndex] = react.exports.useState(0);
+    pageSize = Math.floor(Math.max(1, pageSize));
+    const slice = (() => {
+      if (list.length <= pageSize)
+        return list;
+      const temp = list.slice(index, index + pageSize);
+      const rest = list.slice(0, pageSize - temp.length);
+      return temp.concat(rest);
+    })();
+    const onPrev = (step = 1) => setIndex((i) => (i + list.length - step) % list.length);
+    const onNext = (step = 1) => setIndex((i) => (i + step) % list.length);
+    return {
+      slice,
+      onPrev,
+      onNext
+    };
   };
-  const useMixedHotkey = (key, onOnce, onDouble) => {
-    react.exports.useEffect(() => {
-      let timer;
-      const handler = (e) => {
-        if (e.key !== key)
-          return;
-        if (timer) {
-          clearTimeout(timer);
-          timer = null;
-          onDouble();
-        } else {
-          timer = setTimeout(() => {
-            timer = null;
-            onOnce();
-          }, 250);
-        }
-        e.preventDefault();
-        e.stopPropagation();
-      };
-      document.addEventListener("keydown", handler);
-      return () => {
-        document.removeEventListener("keydown", handler);
-      };
-    }, []);
-  };
-  const container = "_container_xkjfw_1";
-  const leftBtn = "_leftBtn_xkjfw_14";
-  const rightBtn = "_rightBtn_xkjfw_15";
-  const setting = "_setting_xkjfw_44";
-  const content = "_content_xkjfw_68";
-  const item = "_item_xkjfw_80";
-  const imgWrap = "_imgWrap_xkjfw_84";
-  const top = "_top_xkjfw_101";
-  const bottom = "_bottom_xkjfw_102";
-  const title = "_title_xkjfw_134";
-  const styles = {
-    container,
-    leftBtn,
-    rightBtn,
-    setting,
-    content,
+  const item = "_item_12wyh_1";
+  const imgWrap = "_imgWrap_12wyh_12";
+  const top = "_top_12wyh_29";
+  const bottom = "_bottom_12wyh_30";
+  const title = "_title_12wyh_63";
+  const styles$2 = {
     item,
     imgWrap,
     top,
@@ -9286,125 +9468,208 @@ var __publicField = (obj, key, value) => {
       module.exports = reactJsxRuntime_production_min;
     }
   })(jsxRuntime);
+  const Fragment = jsxRuntime.exports.Fragment;
   const jsx = jsxRuntime.exports.jsx;
   const jsxs = jsxRuntime.exports.jsxs;
-  const VideoList = (props) => {
+  const VideoItem = (props) => {
+    var _a, _b;
     const {
-      onClose
+      item: item2,
+      tabIndex = 1,
+      onClick,
+      onDelete
     } = props;
+    return /* @__PURE__ */ jsxs("a", {
+      className: styles$2.item,
+      tabIndex,
+      onClick,
+      onKeyDown: (e) => {
+        if (e.key === "Enter")
+          return onClick();
+        if (e.key === "Delete" || e.key === "Backspace" && e.ctrlKey || e.key === "Backspace" && e.metaKey)
+          return onDelete();
+      },
+      children: [/* @__PURE__ */ jsxs("div", {
+        className: styles$2.imgWrap,
+        children: [/* @__PURE__ */ jsx("img", {
+          src: item2.pic,
+          alt: item2.title
+        }), /* @__PURE__ */ jsxs("div", {
+          className: styles$2.top,
+          children: [/* @__PURE__ */ jsxs("span", {
+            title: (_a = item2.owner) == null ? void 0 : _a.name,
+            children: [/* @__PURE__ */ jsx("svg", {
+              children: /* @__PURE__ */ jsx("use", {
+                xlinkHref: "#widget-up"
+              })
+            }), (_b = item2.owner) == null ? void 0 : _b.name]
+          }), /* @__PURE__ */ jsx("span", {
+            children: parseDate(item2.pubdate)
+          })]
+        }), /* @__PURE__ */ jsx("div", {
+          className: styles$2.bottom,
+          children: /* @__PURE__ */ jsx("span", {
+            children: parseDuration(item2.duration)
+          })
+        })]
+      }), /* @__PURE__ */ jsx("div", {
+        className: styles$2.title,
+        title: item2.title,
+        children: item2.title
+      })]
+    });
+  };
+  const container = "_container_1lx5e_1";
+  const leftBtn = "_leftBtn_1lx5e_14";
+  const rightBtn = "_rightBtn_1lx5e_15";
+  const setting$1 = "_setting_1lx5e_48";
+  const content = "_content_1lx5e_72";
+  const styles$1 = {
+    container,
+    leftBtn,
+    rightBtn,
+    setting: setting$1,
+    content
+  };
+  const VideoPage = (props) => {
     const [list, setList] = react.exports.useState(videoManager.list);
-    const [page, setPage] = react.exports.useState(0);
     const [isPending, startTransition] = react.exports.useTransition();
-    const ref = react.exports.useRef(null);
-    useHotkey("Escape", onClose);
-    const setFocus = () => {
-      setTimeout(() => {
-        var _a;
-        (_a = ref.current.firstElementChild) == null ? void 0 : _a.focus();
-      }, 50);
-    };
+    const contentRef = react.exports.useRef(null);
+    useHotkeys("Tab", {
+      once: true,
+      onClick: () => {
+        setTimeout(() => {
+          var _a;
+          (_a = contentRef.current.firstElementChild) == null ? void 0 : _a.focus();
+        }, 50);
+      }
+    });
     react.exports.useEffect(() => {
       startTransition(() => {
-        setList(videoManager.latestList());
-        setFocus();
+        videoManager.update().then(() => setList(videoManager.list));
       });
     }, []);
-    const onPrev = () => {
-      setPage((p2) => Math.max(0, p2 - 1));
-      setFocus();
-    };
-    const onNext = () => {
-      setPage((p2) => Math.min(list.length / 6 - 1, p2 + 1));
-      setFocus();
-    };
-    const handleClickItem = async (bvid) => {
-      const item2 = videoManager.nextByBvid(bvid);
-      if (item2)
-        playVideoItem(item2);
-    };
-    const handleRefresh = async () => {
-      await videoManager.refresh();
-      setList(videoManager.list);
-    };
+    const {
+      slice,
+      onPrev,
+      onNext
+    } = usePage(list, 6);
     if (isPending)
       return null;
+    const handleDelete = (bvid, index) => {
+      videoManager.getByBvid(bvid);
+      setList(videoManager.list);
+      setTimeout(() => {
+        var _a;
+        (_a = contentRef.current.children[index]) == null ? void 0 : _a.focus();
+      }, 0);
+    };
     return /* @__PURE__ */ jsxs("div", {
-      className: styles.container,
-      children: [/* @__PURE__ */ jsx("div", {
-        className: styles.leftBtn,
-        tabIndex: 2,
-        onClick: onPrev,
-        onKeyDown: (e) => e.key === "Enter" && onPrev()
+      className: styles$1.container,
+      children: [/* @__PURE__ */ jsx("button", {
+        className: styles$1.leftBtn,
+        tabIndex: 1,
+        onClick: () => onPrev(6)
       }), /* @__PURE__ */ jsxs("div", {
-        className: styles.content,
-        ref,
-        children: [list.slice(page * 6, page * 6 + 6).map((item2) => {
-          var _a;
-          return /* @__PURE__ */ jsxs("div", {
-            className: styles.item,
-            tabIndex: 1,
-            onClick: () => handleClickItem(item2.bvid),
-            onKeyDown: (e) => e.key === "Enter" && handleClickItem(item2.bvid),
-            children: [/* @__PURE__ */ jsxs("div", {
-              className: styles.imgWrap,
-              children: [/* @__PURE__ */ jsx("img", {
-                src: item2.pic,
-                alt: item2.title
-              }), /* @__PURE__ */ jsxs("div", {
-                className: styles.top,
-                children: [/* @__PURE__ */ jsxs("span", {
-                  children: [/* @__PURE__ */ jsx("svg", {
-                    children: /* @__PURE__ */ jsx("use", {
-                      xlinkHref: "#widget-up"
-                    })
-                  }), (_a = item2.owner) == null ? void 0 : _a.name]
-                }), /* @__PURE__ */ jsx("span", {
-                  children: parseDate(item2.pubdate)
-                })]
-              }), /* @__PURE__ */ jsx("div", {
-                className: styles.bottom,
-                children: /* @__PURE__ */ jsx("span", {
-                  children: parseDuration(item2.duration)
-                })
-              })]
-            }), /* @__PURE__ */ jsx("div", {
-              className: styles.title,
-              children: item2.title
-            })]
-          }, item2.bvid);
-        }), /* @__PURE__ */ jsxs("div", {
-          className: styles.setting,
+        className: styles$1.content,
+        ref: contentRef,
+        children: [slice.map((item2, index) => /* @__PURE__ */ jsx(VideoItem, {
+          item: item2,
+          tabIndex: 1,
+          onClick: () => playVideoItem(item2.bvid),
+          onDelete: () => handleDelete(item2.bvid, index)
+        }, item2.bvid)), /* @__PURE__ */ jsxs("div", {
+          className: styles$1.setting,
           children: [/* @__PURE__ */ jsxs("span", {
             children: ["\u5E93\u5B58\uFF1A", list.length]
           }), /* @__PURE__ */ jsx("button", {
             tabIndex: 3,
-            onClick: handleRefresh,
-            onKeyDown: (e) => e.key === "Enter" && handleRefresh(),
+            onClick: async () => {
+              await videoManager.refresh();
+              setList(videoManager.list);
+            },
             children: "\u5237\u65B0"
+          }), /* @__PURE__ */ jsx("button", {
+            tabIndex: 3,
+            onClick: props.onSetting,
+            children: "\u8BBE\u7F6E"
           })]
         })]
-      }), /* @__PURE__ */ jsx("div", {
-        className: styles.rightBtn,
+      }), /* @__PURE__ */ jsx("button", {
+        className: styles$1.rightBtn,
         tabIndex: 2,
-        onClick: onNext,
-        onKeyDown: (e) => e.key === "Enter" && onNext()
+        onClick: () => onNext(6)
       })]
     });
   };
-  setupDefault();
-  const Entry = () => {
-    const [visible, setVisible] = react.exports.useState(false);
-    useMixedHotkey(
-      "Backspace",
-      () => setVisible(true),
-      () => playVideo()
-    );
-    if (!visible)
-      return null;
-    return /* @__PURE__ */ jsx(VideoList, {
-      onClose: () => setVisible(false)
+  const setting = "_setting_rqdad_1";
+  const textarea = "_textarea_rqdad_13";
+  const styles = {
+    setting,
+    textarea
+  };
+  const SettingPage = () => {
+    const [white, setWhite] = react.exports.useState(videoManager.whiteText);
+    const [black, setBlack] = react.exports.useState(videoManager.blackText);
+    react.exports.useEffect(() => videoManager.setWhiteText(white), [white]);
+    react.exports.useEffect(() => videoManager.setBlackText(black), [black]);
+    return /* @__PURE__ */ jsxs("div", {
+      className: styles.setting,
+      children: [/* @__PURE__ */ jsxs("div", {
+        className: styles.white,
+        children: [/* @__PURE__ */ jsx("h3", {
+          children: "\u767D\u540D\u5355"
+        }), /* @__PURE__ */ jsx("div", {
+          className: styles.textarea,
+          children: /* @__PURE__ */ jsx("textarea", {
+            name: "boring-whitelist",
+            rows: 5,
+            value: white,
+            onChange: (e) => setWhite(e.target.value)
+          })
+        })]
+      }), /* @__PURE__ */ jsxs("div", {
+        className: styles.black,
+        children: [/* @__PURE__ */ jsx("h3", {
+          children: "\u9ED1\u540D\u5355"
+        }), /* @__PURE__ */ jsx("div", {
+          className: styles.textarea,
+          children: /* @__PURE__ */ jsx("textarea", {
+            name: "boring-blacklist",
+            rows: 10,
+            value: black,
+            onChange: (e) => setBlack(e.target.value)
+          })
+        })]
+      })]
     });
   };
+  const Entry = () => {
+    const [video, setVideo] = react.exports.useState(false);
+    const [setting2, setSetting] = react.exports.useState(false);
+    useHotkeys("Escape", {
+      enabled: video || setting2,
+      onClick: () => {
+        if (setting2)
+          setSetting(false);
+        else
+          setVideo(false);
+      }
+    });
+    useHotkeys("Backspace", {
+      onClick: () => setVideo(true),
+      onDouble: () => {
+        if (!setting2)
+          autoPlayVideo();
+      }
+    });
+    return /* @__PURE__ */ jsxs(Fragment, {
+      children: [video && /* @__PURE__ */ jsx(VideoPage, {
+        onSetting: () => setSetting(true)
+      }), setting2 && /* @__PURE__ */ jsx(SettingPage, {})]
+    });
+  };
+  setupDefault();
   const injectDom = (() => {
     const app = document.createElement("div");
     document.body.append(app);
