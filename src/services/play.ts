@@ -76,7 +76,8 @@ export async function playVideo() {
   setupVideoEnd();
 }
 
-export function playVideoItem(item: IVideoItem) {
+export function playVideoItem(bvid: string) {
+  const item = videoManager.nextByBvid(bvid);
   if (!item) return;
   if (!isVideoPage) {
     window.location.href = getVideoUrl(item);
