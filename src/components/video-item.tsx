@@ -5,17 +5,26 @@ interface Props {
   item: IVideoItem;
   tabIndex?: number;
   onClick: () => void;
+  onDelete: () => void;
 }
 
 const VideoItem = (props: Props) => {
-  const { item, tabIndex = 1, onClick } = props;
+  const { item, tabIndex = 1, onClick, onDelete } = props;
 
   return (
     <a
       className={styles.item}
       tabIndex={tabIndex}
       onClick={onClick}
-      onKeyDown={(e) => e.key === "Enter" && onClick()}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") return onClick();
+        if (
+          e.key === "Delete" ||
+          (e.key === "Backspace" && e.ctrlKey) ||
+          (e.key === "Backspace" && e.metaKey)
+        )
+          return onDelete();
+      }}
     >
       <div className={styles.imgWrap}>
         <img src={item.pic} alt={item.title} />

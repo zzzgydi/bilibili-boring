@@ -10,8 +10,9 @@ class VideoManager {
     return this._list;
   }
 
-  latestList() {
+  async update() {
     this._list = SVideoList.get();
+    if (!this._list.length) await this.refresh();
     return this._list;
   }
 

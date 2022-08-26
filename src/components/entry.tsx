@@ -27,7 +27,7 @@ const Entry = () => {
     enabled: visible,
     onClick: () => {
       setTimeout(() => {
-        (contentRef.current.firstElementChild as HTMLDivElement)?.focus();
+        (contentRef.current.firstElementChild as HTMLElement)?.focus();
       }, 50);
     },
   });
@@ -35,13 +35,21 @@ const Entry = () => {
   useEffect(() => {
     if (!visible) return;
     startTransition(() => {
-      setList(videoManager.latestList());
+      videoManager.update().then(() => setList(videoManager.list));
     });
   }, [visible]);
 
   const { slice, onPrev, onNext } = usePage(list, 6);
 
   if (!visible || isPending) return null;
+
+  const handleDelete = (bvid: string, index: number) => {
+    videoManager.nextByBvid(bvid); // 删掉
+    setList(videoManager.list);
+    setTimeout(() => {
+      (contentRef.current.children[index] as HTMLElement)?.focus();
+    }, 0);
+  };
 
   return (
     <div className={styles.container}>
@@ -52,12 +60,13 @@ const Entry = () => {
       />
 
       <div className={styles.content} ref={contentRef}>
-        {slice.map((item) => (
+        {slice.map((item, index) => (
           <VideoItem
             key={item.bvid}
             item={item}
             tabIndex={1}
             onClick={() => playVideoItem(item.bvid)}
+            onDelete={() => handleDelete(item.bvid, index)}
           />
         ))}
 
