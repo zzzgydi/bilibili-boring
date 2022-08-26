@@ -75,21 +75,21 @@ export function storage<T = any>(key: string, options?: OptionsWithDefault<T>) {
 
 export const SVideoList = storage<IVideoItem[]>("boring-list", {
   defaultValue: [] as IVideoItem[],
-  cacheTime: 10000,
+  cacheTime: 60000,
   validate: Array.isArray,
 });
 export const SVideoHistoryList = storage<string[]>("boring-history", {
   defaultValue: [],
-  cacheTime: 10000,
+  cacheTime: 30000,
   validate: Array.isArray,
 });
 export const SWhitelistText = storage<string>("boring-whitelist", {
   defaultValue: "",
   isJSON: false,
-  cacheTime: 10000,
+  cacheTime: 20000,
 });
 export const SBlacklistText = storage<string>("boring-blacklist", {
   defaultValue: "",
   isJSON: false,
-  cacheTime: 10000,
+  cacheTime: 20000,
 });
