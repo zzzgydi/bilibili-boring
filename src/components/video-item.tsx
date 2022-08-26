@@ -27,7 +27,7 @@ const VideoItem = (props: Props) => {
       }}
     >
       <div className={styles.imgWrap}>
-        <img src={item.pic} alt={item.title} />
+        <img src={item.pic.replace("http:", "")} alt={item.title} />
 
         <div className={styles.top}>
           <span title={item.owner?.name}>

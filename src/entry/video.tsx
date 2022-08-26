@@ -60,7 +60,7 @@ const VideoPage = (props: { onSetting: () => void }) => {
         <div className={styles.setting}>
           <span>库存：{list.length}</span>
           <button
-            tabIndex={3}
+            tabIndex={2}
             onClick={async () => {
               await videoManager.refresh();
               setList(videoManager.list);
@@ -68,7 +68,7 @@ const VideoPage = (props: { onSetting: () => void }) => {
           >
             刷新
           </button>
-          <button tabIndex={3} onClick={props.onSetting}>
+          <button tabIndex={2} onClick={props.onSetting}>
             设置
           </button>
         </div>
@@ -76,7 +76,7 @@ const VideoPage = (props: { onSetting: () => void }) => {
 
       <button
         className={styles.rightBtn}
-        tabIndex={2}
+        tabIndex={1}
         onClick={() => onNext(6)}
       />
     </div>
