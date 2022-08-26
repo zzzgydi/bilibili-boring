@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 type IHotKeys = string | string[];
 
@@ -53,6 +53,9 @@ function matchHotkeys(key: IHotKeys, event: KeyboardEvent): boolean {
 export const useHotkeys = (key: IHotKeys, options: IHotKeysOptions) => {
   const { once = false, enabled: ready = true } = options;
 
+  const fnRef = useRef(options);
+  fnRef.current = options;
+
   useEffect(() => {
     if (!ready || !key || (Array.isArray(key) && key.length === 0)) return;
     if (!options.onClick && !options.onDouble) return;
@@ -68,15 +71,17 @@ export const useHotkeys = (key: IHotKeys, options: IHotKeysOptions) => {
 
       handler = (e: KeyboardEvent) => {
         if (!matchHotkeys(key, e)) return;
+
+        const opt = fnRef.current;
         if (timer) {
           clearTimeout(timer);
           timer = null;
-          options.onDouble!();
+          opt.onDouble!();
         } else {
           timer = setTimeout(() => {
             timer = null;
-            options.onClick?.();
-          }, options.interval ?? 250);
+            opt.onClick?.();
+          }, opt.interval ?? 250);
         }
         e.preventDefault();
         e.stopPropagation();
@@ -85,7 +90,7 @@ export const useHotkeys = (key: IHotKeys, options: IHotKeysOptions) => {
     } else {
       handler = (e: KeyboardEvent) => {
         if (!matchHotkeys(key, e)) return;
-        options.onClick?.();
+        fnRef.current.onClick?.();
         e.preventDefault();
         e.stopPropagation();
         if (once) handleRemove();
