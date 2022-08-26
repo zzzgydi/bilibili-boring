@@ -3,7 +3,7 @@
 /**
  * alias of vite-plugin-monkey/dist/client
  */
-declare module "$" {
+ declare module "$" {
   export * from "vite-plugin-monkey/dist/client";
 }
 
@@ -24,4 +24,10 @@ interface IVideoItem {
   duration: number;
   is_followed: number;
   pubdate: number;
+}
+
+interface IFilterItem {
+  key: string;
+  opr: string; // = == != > < >= <= has
+  val: string;
 }

@@ -1,4 +1,3 @@
-import { SVideoListLen } from "./storage";
 import { isVideoPage, isBoringYes, querySelector, currentUrl } from "./utils";
 import { videoManager } from "./video";
 
@@ -38,6 +37,7 @@ export async function setupVideoEnd() {
   video.addEventListener("ended", onended);
 }
 
+// 在播放页自动设置全屏
 export async function setupFullScreen(): Promise<void> {
   if (!isVideoPage) return;
 
@@ -63,7 +63,7 @@ export function getVideoUrl(item: IVideoItem) {
   return `${protocol}//www.bilibili.com/video/${item.bvid}?boring=yes`;
 }
 
-export async function playVideo() {
+export async function autoPlayVideo() {
   if (!isVideoPage) {
     const next = await videoManager.tryNext(5);
     if (next) {
@@ -76,26 +76,22 @@ export async function playVideo() {
   setupVideoEnd();
 }
 
+export function setupDefault() {
+  if (isVideoPage && isBoringYes) {
+    // 避免刷新页面后自动全屏
+    history.replaceState("", "", currentUrl.replace("boring=yes", "boring=no"));
+    setTimeout(() => autoPlayVideo(), 1500);
+    return;
+  }
+}
+
 export function playVideoItem(bvid: string) {
-  const item = videoManager.nextByBvid(bvid);
+  const item = videoManager.getByBvid(bvid);
   if (!item) return;
   if (!isVideoPage) {
     window.location.href = getVideoUrl(item);
   } else {
     history.pushState("", "", getVideoUrl(item));
     location.reload();
-  }
-}
-
-export function setupDefault() {
-  if (isVideoPage && isBoringYes) {
-    // 避免刷新页面后自动全屏
-    history.replaceState("", "", currentUrl.replace("boring=yes", "boring=no"));
-    setTimeout(() => playVideo(), 1500);
-    return;
-  }
-
-  if (SVideoListLen.get() < 10) {
-    videoManager.refresh();
   }
 }
