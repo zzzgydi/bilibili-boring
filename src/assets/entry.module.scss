@@ -24,8 +24,19 @@ $arrowColor: #ccc;
   position: relative;
   width: 30px;
   height: 50px;
-  cursor: pointer;
   overflow: hidden;
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
 
   &:focus {
     outline: auto;
@@ -36,17 +47,19 @@ $arrowColor: #ccc;
     position: absolute;
     width: 30px;
     height: 30px;
+    border: none;
     border-top: 5px solid $arrowColor;
     border-right: 5px solid $arrowColor;
     top: 50%;
     left: -10px;
     transform-origin: top;
     transform: rotate(45deg) translateY(-50%);
+    box-sizing: border-box;
   }
 }
 
 .leftBtn::before {
-  left: 10px;
+  left: 8px;
   border-top: 5px solid $arrowColor;
   border-left: 5px solid $arrowColor;
   border-right: none;
