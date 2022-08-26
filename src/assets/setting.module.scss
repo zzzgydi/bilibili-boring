@@ -1,0 +1,30 @@
+.setting {
+  position: fixed;
+  width: 90%;
+  max-width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000002;
+  background: #fff;
+  padding: 20px 30px;
+}
+
+.white,
+.black {
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid #666;
+  padding: 1px;
+  box-sizing: content-box;
+
+  > textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    margin: 1px 0;
+  }
+}

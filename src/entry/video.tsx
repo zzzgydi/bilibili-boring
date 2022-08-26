@@ -2,29 +2,17 @@ import { useEffect, useRef, useState, useTransition } from "react";
 import { useHotkeys } from "@/hooks/use-hotkeys";
 import { usePage } from "@/hooks/use-page";
 import { videoManager } from "@/services/video";
-import { playVideo, playVideoItem } from "@/services/play";
-import VideoItem from "./video-item";
+import { playVideoItem } from "@/services/play";
+import VideoItem from "@/components/video-item";
 import styles from "@/assets/entry.module.scss";
 
-const Entry = () => {
-  const [visible, setVisible] = useState(false);
+const VideoPage = (props: { onSetting: () => void }) => {
   const [list, setList] = useState(videoManager.list);
   const [isPending, startTransition] = useTransition();
-
-  useHotkeys("Escape", {
-    enabled: visible,
-    onClick: () => setVisible(false),
-  });
-
-  useHotkeys("Backspace", {
-    onClick: () => setVisible(true), // 单击
-    onDouble: () => playVideo(), // 双击
-  });
 
   const contentRef = useRef<HTMLDivElement>(null!);
   useHotkeys("Tab", {
     once: true,
-    enabled: visible,
     onClick: () => {
       setTimeout(() => {
         (contentRef.current.firstElementChild as HTMLElement)?.focus();
@@ -33,18 +21,17 @@ const Entry = () => {
   });
 
   useEffect(() => {
-    if (!visible) return;
     startTransition(() => {
       videoManager.update().then(() => setList(videoManager.list));
     });
-  }, [visible]);
+  }, []);
 
   const { slice, onPrev, onNext } = usePage(list, 6);
 
-  if (!visible || isPending) return null;
+  if (isPending) return null;
 
   const handleDelete = (bvid: string, index: number) => {
-    videoManager.nextByBvid(bvid); // 删掉
+    videoManager.getByBvid(bvid); // 删掉
     setList(videoManager.list);
     setTimeout(() => {
       (contentRef.current.children[index] as HTMLElement)?.focus();
@@ -81,6 +68,9 @@ const Entry = () => {
           >
             刷新
           </button>
+          <button tabIndex={3} onClick={props.onSetting}>
+            设置
+          </button>
         </div>
       </div>
 
@@ -93,4 +83,4 @@ const Entry = () => {
   );
 };
 
-export default Entry;
+export default VideoPage;

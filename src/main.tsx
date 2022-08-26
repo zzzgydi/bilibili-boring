@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Entry from "@/components/entry";
+import Entry from "./entry";
 import { setupDefault } from "@/services/play";
 
 setupDefault();
