@@ -16,6 +16,8 @@ class VideoManager {
   private _whitelist: IFilterItem[] = [];
   private _blacklist: IFilterItem[] = [];
 
+  private _shouldFilter = false;
+
   constructor() {
     this._whiteText = SWhitelistText.get();
     this._blackText = SBlacklistText.get();
@@ -115,11 +117,17 @@ class VideoManager {
       .filter((e) => e && e.bvid && !itemSet.has(e.bvid))
       .filter(this.rulesFilter.bind(this)) as IVideoItem[];
 
+    this._shouldFilter = false;
     SVideoList.set(shuffleList(list.concat(items)));
   }
 
   get list() {
-    return SVideoList.get().filter((e) => e && e.bvid);
+    const list = SVideoList.get().filter((e) => e && e.bvid);
+    if (this._shouldFilter) {
+      this._shouldFilter = false;
+      return list.filter(this.rulesFilter.bind(this));
+    }
+    return list;
   }
 
   get whiteText() {
@@ -135,6 +143,7 @@ class VideoManager {
     SWhitelistText.set(value);
     this._whiteText = value;
     this._whitelist = generateFilters(this._whiteText);
+    this._shouldFilter = true;
   }
 
   setBlackText(value: string) {
@@ -142,6 +151,7 @@ class VideoManager {
     SBlacklistText.set(value);
     this._blackText = value;
     this._blacklist = generateFilters(this._blackText);
+    this._shouldFilter = true;
   }
 
   private rulesFilter(item: IVideoItem | null) {

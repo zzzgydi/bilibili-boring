@@ -37,7 +37,7 @@ const Entry = () => {
   return (
     <>
       {video && <VideoPage onSetting={() => setSetting(true)} />}
-      {setting && <SettingPage />}
+      {setting && <SettingPage onClose={() => setSetting(false)} />}
     </>
   );
 };

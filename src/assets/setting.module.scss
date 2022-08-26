@@ -6,19 +6,44 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000002;
-  background: #fff;
-  padding: 20px 30px;
+  background: rgba(#fff, 0.98);
+  padding: 20px 20px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.close {
+  position: absolute;
+  color: #303233;
+  top: 4px;
+  right: 12px;
+  padding: 6px 8px;
+  z-index: 2;
 }
 
 .white,
 .black {
+  > h3 {
+    color: #303233;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+}
+
+.white {
+  > h3 {
+    margin-top: 10px;
+  }
 }
 
 .textarea {
   width: 100%;
-  border: 1px solid #666;
+  border: 1px solid #909399;
   padding: 1px;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 4px;
 
   > textarea {
     width: 100%;
@@ -26,5 +51,6 @@
     border: none;
     outline: none;
     margin: 1px 0;
+    background: transparent;
   }
 }
