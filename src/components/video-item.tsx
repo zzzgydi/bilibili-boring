@@ -30,13 +30,7 @@ const VideoItem = (props: Props) => {
         <img src={item.pic.replace("http:", "")} alt={item.title} />
 
         <div className={styles.top}>
-          <span title={item.owner?.name}>
-            <svg>
-              <use xlinkHref="#widget-up"></use>
-            </svg>
-            {item.owner?.name}
-          </span>
-
+          <span title={item.owner?.name}>{item.owner?.name}</span>
           <span>{parseDate(item.pubdate)}</span>
         </div>
 
