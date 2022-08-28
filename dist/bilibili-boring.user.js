@@ -13,7 +13,7 @@
 // @exclude      *://api.*.bilibili.com/*
 // ==/UserScript==
 
-// use vite-plugin-monkey@2.1.1 at 2022-08-26T13:01:32.432Z
+// use vite-plugin-monkey@2.1.1 at 2022-08-28T18:23:29.708Z
 
 ;(({ css = "" }) => {
   const style = document.createElement("style");
@@ -21,7 +21,7 @@
   style.dataset.source = "vite-plugin-monkey";
   document.head.appendChild(style);
 })({
-  "css": "._item_12wyh_1 {\n  width: 100%;\n  cursor: pointer;\n}\n._item_12wyh_1:focus {\n  outline: auto;\n}\n._item_12wyh_1:hover {\n  outline: auto;\n}\n\n._imgWrap_12wyh_12 {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  border-radius: 4px;\n  margin-bottom: 6px;\n  aspect-ratio: 16/9;\n}\n._imgWrap_12wyh_12 > img {\n  object-fit: contain;\n  width: 100%;\n}\n._imgWrap_12wyh_12 svg {\n  width: 14px;\n  height: 14px;\n  margin-right: 2px;\n}\n._imgWrap_12wyh_12 ._top_12wyh_29,\n._imgWrap_12wyh_12 ._bottom_12wyh_30 {\n  position: absolute;\n  left: 0;\n  right: 0;\n  height: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  font-size: 14px;\n  color: #fff;\n  box-sizing: content-box;\n  line-height: 1;\n}\n._imgWrap_12wyh_12 ._top_12wyh_29 {\n  top: 0;\n  padding: 2px 6px 6px;\n  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n}\n._imgWrap_12wyh_12 ._top_12wyh_29 > span:first-child {\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n._imgWrap_12wyh_12 ._top_12wyh_29 > span:last-child {\n  flex: none;\n}\n._imgWrap_12wyh_12 ._bottom_12wyh_30 {\n  bottom: 0;\n  padding: 10px 6px 2px;\n  background: linear-gradient(to top, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n  justify-content: flex-end;\n}\n\n._title_12wyh_63 {\n  display: -webkit-box;\n  width: 100%;\n  font-size: 14px;\n  color: #fff;\n  -webkit-line-clamp: 2;\n  line-height: 1.2;\n  max-height: 2.4em;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n}._container_1lx5e_1 {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0));\n  z-index: 1000001;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n._leftBtn_1lx5e_14,\n._rightBtn_1lx5e_15 {\n  position: relative;\n  width: 30px;\n  height: 50px;\n  cursor: pointer;\n  overflow: hidden;\n}\n._leftBtn_1lx5e_14:focus,\n._rightBtn_1lx5e_15:focus {\n  outline: auto;\n}\n._leftBtn_1lx5e_14::before,\n._rightBtn_1lx5e_15::before {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border-top: 5px solid #ccc;\n  border-right: 5px solid #ccc;\n  top: 50%;\n  left: -10px;\n  transform-origin: top;\n  transform: rotate(45deg) translateY(-50%);\n}\n\n._leftBtn_1lx5e_14::before {\n  left: 10px;\n  border-top: 5px solid #ccc;\n  border-left: 5px solid #ccc;\n  border-right: none;\n  transform: rotate(-45deg) translateY(-50%);\n}\n\n._setting_1lx5e_48 {\n  position: absolute;\n  top: 136px;\n  right: 50px;\n  color: #fff;\n  font-size: 14px;\n  z-index: 2;\n}\n._setting_1lx5e_48 > button {\n  color: #000;\n  padding: 4px 6px;\n  font-size: 14px;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background: #fdfdfd;\n  overflow: hidden;\n  margin-left: 16px;\n}\n._setting_1lx5e_48 > button:active, ._setting_1lx5e_48 > button:focus {\n  background: #fff;\n  border-color: #aaa;\n  outline: auto;\n}\n\n._content_1lx5e_72 {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  min-height: 300px;\n  padding: 200px 50px;\n  box-sizing: border-box;\n  display: grid;\n  grid-template-columns: repeat(6, minmax(0, 1fr));\n  gap: 2%;\n}._setting_rqdad_1 {\n  position: fixed;\n  width: 90%;\n  max-width: 400px;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 1000002;\n  background: #fff;\n  padding: 20px 30px;\n}\n\n._textarea_rqdad_13 {\n  width: 100%;\n  border: 1px solid #666;\n  padding: 1px;\n  box-sizing: content-box;\n}\n._textarea_rqdad_13 > textarea {\n  width: 100%;\n  resize: none;\n  border: none;\n  outline: none;\n  margin: 1px 0;\n}"
+  "css": "._setting_1tdcp_1 {\n  position: fixed;\n  width: 90%;\n  max-width: 400px;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 1000002;\n  background: rgba(255, 255, 255, 0.98);\n  padding: 20px 20px;\n  overflow: hidden;\n  border-radius: 6px;\n  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;\n}\n\n._close_1tdcp_16 {\n  position: absolute;\n  color: #303233;\n  top: 4px;\n  right: 12px;\n  padding: 6px 8px;\n  z-index: 2;\n}\n\n._white_1tdcp_25 > h3,\n._black_1tdcp_26 > h3 {\n  color: #303233;\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n._white_1tdcp_25 > h3 {\n  margin-top: 10px;\n}\n\n._textarea_1tdcp_36 {\n  width: 100%;\n  border: 1px solid #909399;\n  padding: 1px;\n  box-sizing: border-box;\n  font-size: 14px;\n  border-radius: 4px;\n}\n._textarea_1tdcp_36 > textarea {\n  width: 100%;\n  resize: none;\n  border: none;\n  outline: none;\n  margin: 1px 0;\n  background: transparent;\n}\n\n._footer_1tdcp_53 {\n  margin-top: 10px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n._footer_1tdcp_53 ._saveBtn_1tdcp_59 {\n  color: #000;\n  padding: 4px 6px;\n  font-size: 14px;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background: #fdfdfd;\n  overflow: hidden;\n}\n._footer_1tdcp_53 ._saveBtn_1tdcp_59:active, ._footer_1tdcp_53 ._saveBtn_1tdcp_59:focus {\n  background: #fff;\n  border-color: #aaa;\n  outline: auto;\n}._item_16d2x_1 {\n  width: 100%;\n  cursor: pointer;\n}\n._item_16d2x_1:focus {\n  outline: auto;\n}\n._item_16d2x_1:hover {\n  outline: auto;\n}\n\n._imgWrap_16d2x_12 {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  border-radius: 4px;\n  margin-bottom: 6px;\n  aspect-ratio: 16/9;\n}\n._imgWrap_16d2x_12 > img {\n  object-fit: contain;\n  width: 100%;\n}\n._imgWrap_16d2x_12 svg {\n  width: 14px;\n  height: 14px;\n  margin-right: 2px;\n}\n._imgWrap_16d2x_12 ._top_16d2x_29,\n._imgWrap_16d2x_12 ._bottom_16d2x_30 {\n  position: absolute;\n  left: 0;\n  right: 0;\n  height: 18px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  font-size: 14px;\n  color: #fff;\n  box-sizing: content-box;\n  line-height: 1;\n}\n._imgWrap_16d2x_12 ._top_16d2x_29 {\n  top: 0;\n  padding: 2px 6px 6px;\n  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n}\n._imgWrap_16d2x_12 ._top_16d2x_29 > span:first-child {\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n}\n._imgWrap_16d2x_12 ._top_16d2x_29 > span:last-child {\n  flex: none;\n}\n._imgWrap_16d2x_12 ._bottom_16d2x_30 {\n  bottom: 0;\n  padding: 10px 6px 2px;\n  background: linear-gradient(to top, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.05));\n  justify-content: flex-end;\n}\n\n._title_16d2x_63 {\n  display: -webkit-box;\n  width: 100%;\n  height: 2.4em;\n  font-size: 14px;\n  color: #fff;\n  -webkit-line-clamp: 2;\n  line-height: 1.2;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n}._container_41r3g_1 {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0));\n  z-index: 1000001;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n._leftBtn_41r3g_14,\n._rightBtn_41r3g_15 {\n  position: relative;\n  width: 30px;\n  height: 50px;\n  overflow: hidden;\n  display: block;\n  border: none;\n  padding: 0;\n  margin: 0;\n  background: transparent;\n  box-sizing: border-box;\n  font-family: inherit;\n  font-size: 100%;\n  line-height: 1.15;\n  text-transform: none;\n  -webkit-appearance: button;\n  cursor: pointer;\n}\n._leftBtn_41r3g_14:focus,\n._rightBtn_41r3g_15:focus {\n  outline: auto;\n}\n._leftBtn_41r3g_14::before,\n._rightBtn_41r3g_15::before {\n  content: \"\";\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  border: none;\n  border-top: 5px solid #ccc;\n  border-right: 5px solid #ccc;\n  top: 50%;\n  left: -10px;\n  transform-origin: top;\n  transform: rotate(45deg) translateY(-50%);\n  box-sizing: border-box;\n}\n\n._leftBtn_41r3g_14::before {\n  left: 8px;\n  border-top: 5px solid #ccc;\n  border-left: 5px solid #ccc;\n  border-right: none;\n  transform: rotate(-45deg) translateY(-50%);\n}\n\n._setting_41r3g_61 {\n  position: absolute;\n  top: 136px;\n  right: 50px;\n  color: #fff;\n  font-size: 14px;\n  z-index: 2;\n}\n._setting_41r3g_61 > button {\n  color: #000;\n  padding: 4px 6px;\n  font-size: 14px;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background: #fdfdfd;\n  overflow: hidden;\n  margin-left: 16px;\n}\n._setting_41r3g_61 > button:active, ._setting_41r3g_61 > button:focus {\n  background: #fff;\n  border-color: #aaa;\n  outline: auto;\n}\n\n._content_41r3g_85 {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  min-height: 300px;\n  padding: 200px 50px;\n  box-sizing: border-box;\n  display: grid;\n  grid-template-columns: repeat(6, minmax(0, 1fr));\n  gap: 2%;\n}"
 });
 
 var __defProp = Object.defineProperty;
@@ -7585,7 +7585,7 @@ var __publicField = (obj, key, value) => {
       if (typeof options.onDouble === "function") {
         let timer;
         handler = (e) => {
-          var _a;
+          var _a2;
           if (!matchHotkeys(key, e))
             return;
           const opt = fnRef.current;
@@ -7595,10 +7595,10 @@ var __publicField = (obj, key, value) => {
             opt.onDouble();
           } else {
             timer = setTimeout(() => {
-              var _a2;
+              var _a3;
               timer = null;
-              (_a2 = opt.onClick) == null ? void 0 : _a2.call(opt);
-            }, (_a = opt.interval) != null ? _a : 250);
+              (_a3 = opt.onClick) == null ? void 0 : _a3.call(opt);
+            }, (_a2 = opt.interval) != null ? _a2 : 250);
           }
           e.preventDefault();
           e.stopPropagation();
@@ -7607,10 +7607,10 @@ var __publicField = (obj, key, value) => {
         };
       } else {
         handler = (e) => {
-          var _a, _b;
+          var _a2, _b;
           if (!matchHotkeys(key, e))
             return;
-          (_b = (_a = fnRef.current).onClick) == null ? void 0 : _b.call(_a);
+          (_b = (_a2 = fnRef.current).onClick) == null ? void 0 : _b.call(_a2);
           e.preventDefault();
           e.stopPropagation();
           if (once)
@@ -7713,10 +7713,10 @@ var __publicField = (obj, key, value) => {
   };
   var bind$1 = bind$2;
   var toString = Object.prototype.toString;
-  var kindOf = function(cache) {
+  var kindOf = function(cache2) {
     return function(thing) {
       var str = toString.call(thing);
-      return cache[str] || (cache[str] = str.slice(8, -1).toLowerCase());
+      return cache2[str] || (cache2[str] = str.slice(8, -1).toLowerCase());
     };
   }(/* @__PURE__ */ Object.create(null));
   function kindOfTest(type) {
@@ -7728,11 +7728,11 @@ var __publicField = (obj, key, value) => {
   function isArray(val) {
     return Array.isArray(val);
   }
-  function isUndefined(val) {
+  function isUndefined$1(val) {
     return typeof val === "undefined";
   }
   function isBuffer(val) {
-    return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && typeof val.constructor.isBuffer === "function" && val.constructor.isBuffer(val);
+    return val !== null && !isUndefined$1(val) && val.constructor !== null && !isUndefined$1(val.constructor) && typeof val.constructor.isBuffer === "function" && val.constructor.isBuffer(val);
   }
   var isArrayBuffer = kindOfTest("ArrayBuffer");
   function isArrayBufferView(val) {
@@ -7764,15 +7764,15 @@ var __publicField = (obj, key, value) => {
   var isFile = kindOfTest("File");
   var isBlob = kindOfTest("Blob");
   var isFileList = kindOfTest("FileList");
-  function isFunction(val) {
+  function isFunction$1(val) {
     return toString.call(val) === "[object Function]";
   }
   function isStream(val) {
-    return isObject(val) && isFunction(val.pipe);
+    return isObject(val) && isFunction$1(val.pipe);
   }
   function isFormData(thing) {
     var pattern = "[object FormData]";
-    return thing && (typeof FormData === "function" && thing instanceof FormData || toString.call(thing) === pattern || isFunction(thing.toString) && thing.toString() === pattern);
+    return thing && (typeof FormData === "function" && thing instanceof FormData || toString.call(thing) === pattern || isFunction$1(thing.toString) && thing.toString() === pattern);
   }
   var isURLSearchParams = kindOfTest("URLSearchParams");
   function trim(str) {
@@ -7875,7 +7875,7 @@ var __publicField = (obj, key, value) => {
     if (!thing)
       return null;
     var i = thing.length;
-    if (isUndefined(i))
+    if (isUndefined$1(i))
       return null;
     var arr = new Array(i);
     while (i-- > 0) {
@@ -7898,11 +7898,11 @@ var __publicField = (obj, key, value) => {
     isNumber,
     isObject,
     isPlainObject,
-    isUndefined,
+    isUndefined: isUndefined$1,
     isDate,
     isFile,
     isBlob,
-    isFunction,
+    isFunction: isFunction$1,
     isStream,
     isURLSearchParams,
     isStandardBrowserEnv,
@@ -7935,7 +7935,7 @@ var __publicField = (obj, key, value) => {
       serializedParams = params.toString();
     } else {
       var parts = [];
-      utils$a.forEach(params, function serialize(val, key) {
+      utils$a.forEach(params, function serialize2(val, key) {
         if (val === null || typeof val === "undefined") {
           return;
         }
@@ -9038,13 +9038,13 @@ var __publicField = (obj, key, value) => {
   var Axios = Axios_1;
   var mergeConfig = mergeConfig$2;
   var defaults = defaults_1;
-  function createInstance(defaultConfig) {
-    var context = new Axios(defaultConfig);
+  function createInstance(defaultConfig2) {
+    var context = new Axios(defaultConfig2);
     var instance = bind(Axios.prototype.request, context);
     utils.extend(instance, Axios.prototype, context);
     utils.extend(instance, context);
     instance.create = function create(instanceConfig) {
-      return createInstance(mergeConfig(defaultConfig, instanceConfig));
+      return createInstance(mergeConfig(defaultConfig2, instanceConfig));
     };
     return instance;
   }
@@ -9085,7 +9085,7 @@ var __publicField = (obj, key, value) => {
     }).filter(Boolean);
   }
   function executeFilter(item2, filter) {
-    var _a, _b, _c, _d, _e;
+    var _a2, _b, _c, _d, _e;
     const { key, opr, val } = filter;
     function stringMatch(lh2, rh2) {
       if (["=", ">=", "<=", "=="].includes(opr))
@@ -9131,7 +9131,7 @@ var __publicField = (obj, key, value) => {
     if (key === "title")
       return stringMatch(item2.title, val);
     if (key === "up" || key === "name")
-      return stringMatch((_a = item2.owner) == null ? void 0 : _a.name, val);
+      return stringMatch((_a2 = item2.owner) == null ? void 0 : _a2.name, val);
     if (key === "upid" || key === "mid")
       return stringMatch((_b = item2.owner) == null ? void 0 : _b.mid, val);
     if (key === "view")
@@ -9157,11 +9157,11 @@ var __publicField = (obj, key, value) => {
       stringify,
       parse
     } = options != null ? options : {};
-    let cache;
+    let cache2;
     let updated = 0;
     return {
       set: (data2) => {
-        cache = data2;
+        cache2 = data2;
         updated = Date.now();
         try {
           if (data2 == null) {
@@ -9176,42 +9176,42 @@ var __publicField = (obj, key, value) => {
       },
       get: () => {
         if (cacheTime > 0 && Date.now() - updated < cacheTime) {
-          return cache;
+          return cache2;
         }
         try {
           updated = Date.now();
           const dataStr = localStorage.getItem(key);
           if (!dataStr)
-            return cache = defaultValue;
+            return cache2 = defaultValue;
           const data2 = isJSON ? JSON.parse(dataStr) : parse ? parse(dataStr) : dataStr;
           if (!validate || validate && validate(data2))
-            return cache = data2;
+            return cache2 = data2;
         } catch (e) {
           console.log(e);
         }
-        return cache = defaultValue;
+        return cache2 = defaultValue;
       }
     };
   }
   const SVideoList = storage("boring-list", {
     defaultValue: [],
-    cacheTime: 1e4,
+    cacheTime: 6e4,
     validate: Array.isArray
   });
   const SVideoHistoryList = storage("boring-history", {
     defaultValue: [],
-    cacheTime: 1e4,
+    cacheTime: 3e4,
     validate: Array.isArray
   });
   const SWhitelistText = storage("boring-whitelist", {
     defaultValue: "",
     isJSON: false,
-    cacheTime: 1e4
+    cacheTime: 2e4
   });
   const SBlacklistText = storage("boring-blacklist", {
     defaultValue: "",
     isJSON: false,
-    cacheTime: 1e4
+    cacheTime: 2e4
   });
   class VideoManager {
     constructor() {
@@ -9230,12 +9230,6 @@ var __publicField = (obj, key, value) => {
       SVideoList.set(list);
       if (list.length < 12)
         this.refresh();
-    }
-    async update() {
-      const list = SVideoList.get();
-      if (list.length < 12)
-        await this.refresh();
-      return SVideoList.get();
     }
     next(index = 0) {
       index = Math.max(0, Math.floor(index));
@@ -9319,6 +9313,9 @@ var __publicField = (obj, key, value) => {
       SBlacklistText.set(value);
       this._blackText = value;
       this._blacklist = generateFilters(this._blackText);
+    }
+    updateList() {
+      SVideoList.set(this.list.filter(this.rulesFilter.bind(this)));
     }
     rulesFilter(item2) {
       if (!item2)
@@ -9406,35 +9403,808 @@ var __publicField = (obj, key, value) => {
       location.reload();
     }
   }
-  const usePage = (list, pageSize) => {
-    const [index, setIndex] = react.exports.useState(0);
-    pageSize = Math.floor(Math.max(1, pageSize));
-    const slice = (() => {
-      if (list.length <= pageSize)
-        return list;
-      const temp = list.slice(index, index + pageSize);
-      const rest = list.slice(0, pageSize - temp.length);
-      return temp.concat(rest);
-    })();
-    const onPrev = (step = 1) => setIndex((i) => (i + list.length - step) % list.length);
-    const onNext = (step = 1) => setIndex((i) => (i + step) % list.length);
-    return {
-      slice,
-      onPrev,
-      onNext
+  /*! *****************************************************************************
+  	Copyright (c) Microsoft Corporation.
+  
+  	Permission to use, copy, modify, and/or distribute this software for any
+  	purpose with or without fee is hereby granted.
+  
+  	THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+  	REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  	AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+  	INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  	LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  	OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  	PERFORMANCE OF THIS SOFTWARE.
+  	***************************************************************************** */
+  function __awaiter(thisArg, _arguments, P2, generator) {
+    function adopt(value) {
+      return value instanceof P2 ? value : new P2(function(resolve) {
+        resolve(value);
+      });
+    }
+    return new (P2 || (P2 = Promise))(function(resolve, reject) {
+      function fulfilled(value) {
+        try {
+          step(generator.next(value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function rejected(value) {
+        try {
+          step(generator["throw"](value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function step(result) {
+        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+  }
+  function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() {
+      if (t2[0] & 1)
+        throw t2[1];
+      return t2[1];
+    }, trys: [], ops: [] }, f2, y2, t2, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
+      return this;
+    }), g;
+    function verb(n2) {
+      return function(v2) {
+        return step([n2, v2]);
+      };
+    }
+    function step(op) {
+      if (f2)
+        throw new TypeError("Generator is already executing.");
+      while (_)
+        try {
+          if (f2 = 1, y2 && (t2 = op[0] & 2 ? y2["return"] : op[0] ? y2["throw"] || ((t2 = y2["return"]) && t2.call(y2), 0) : y2.next) && !(t2 = t2.call(y2, op[1])).done)
+            return t2;
+          if (y2 = 0, t2)
+            op = [op[0] & 2, t2.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t2 = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y2 = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t2 = _.trys, t2 = t2.length > 0 && t2[t2.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t2 || op[1] > t2[0] && op[1] < t2[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t2[1]) {
+                _.label = t2[1];
+                t2 = op;
+                break;
+              }
+              if (t2 && _.label < t2[2]) {
+                _.label = t2[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t2[2])
+                _.ops.pop();
+              _.trys.pop();
+              continue;
+          }
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y2 = 0;
+        } finally {
+          f2 = t2 = 0;
+        }
+      if (op[0] & 5)
+        throw op[1];
+      return { value: op[0] ? op[1] : void 0, done: true };
+    }
+  }
+  var noop = function() {
+  };
+  var UNDEFINED = noop();
+  var OBJECT = Object;
+  var isUndefined = function(v2) {
+    return v2 === UNDEFINED;
+  };
+  var isFunction = function(v2) {
+    return typeof v2 == "function";
+  };
+  var mergeObjects = function(a, b) {
+    return OBJECT.assign({}, a, b);
+  };
+  var STR_UNDEFINED = "undefined";
+  var hasWindow = function() {
+    return typeof window != STR_UNDEFINED;
+  };
+  var hasDocument = function() {
+    return typeof document != STR_UNDEFINED;
+  };
+  var hasRequestAnimationFrame = function() {
+    return hasWindow() && typeof window["requestAnimationFrame"] != STR_UNDEFINED;
+  };
+  var table = /* @__PURE__ */ new WeakMap();
+  var counter = 0;
+  var stableHash = function(arg) {
+    var type = typeof arg;
+    var constructor = arg && arg.constructor;
+    var isDate2 = constructor == Date;
+    var result;
+    var index;
+    if (OBJECT(arg) === arg && !isDate2 && constructor != RegExp) {
+      result = table.get(arg);
+      if (result)
+        return result;
+      result = ++counter + "~";
+      table.set(arg, result);
+      if (constructor == Array) {
+        result = "@";
+        for (index = 0; index < arg.length; index++) {
+          result += stableHash(arg[index]) + ",";
+        }
+        table.set(arg, result);
+      }
+      if (constructor == OBJECT) {
+        result = "#";
+        var keys = OBJECT.keys(arg).sort();
+        while (!isUndefined(index = keys.pop())) {
+          if (!isUndefined(arg[index])) {
+            result += index + ":" + stableHash(arg[index]) + ",";
+          }
+        }
+        table.set(arg, result);
+      }
+    } else {
+      result = isDate2 ? arg.toJSON() : type == "symbol" ? arg.toString() : type == "string" ? JSON.stringify(arg) : "" + arg;
+    }
+    return result;
+  };
+  var online = true;
+  var isOnline = function() {
+    return online;
+  };
+  var hasWin = hasWindow();
+  var hasDoc = hasDocument();
+  var onWindowEvent = hasWin && window.addEventListener ? window.addEventListener.bind(window) : noop;
+  var onDocumentEvent = hasDoc ? document.addEventListener.bind(document) : noop;
+  var offWindowEvent = hasWin && window.removeEventListener ? window.removeEventListener.bind(window) : noop;
+  var offDocumentEvent = hasDoc ? document.removeEventListener.bind(document) : noop;
+  var isVisible = function() {
+    var visibilityState = hasDoc && document.visibilityState;
+    return isUndefined(visibilityState) || visibilityState !== "hidden";
+  };
+  var initFocus = function(callback) {
+    onDocumentEvent("visibilitychange", callback);
+    onWindowEvent("focus", callback);
+    return function() {
+      offDocumentEvent("visibilitychange", callback);
+      offWindowEvent("focus", callback);
     };
   };
-  const item = "_item_12wyh_1";
-  const imgWrap = "_imgWrap_12wyh_12";
-  const top = "_top_12wyh_29";
-  const bottom = "_bottom_12wyh_30";
-  const title = "_title_12wyh_63";
+  var initReconnect = function(callback) {
+    var onOnline = function() {
+      online = true;
+      callback();
+    };
+    var onOffline = function() {
+      online = false;
+    };
+    onWindowEvent("online", onOnline);
+    onWindowEvent("offline", onOffline);
+    return function() {
+      offWindowEvent("online", onOnline);
+      offWindowEvent("offline", onOffline);
+    };
+  };
+  var preset = {
+    isOnline,
+    isVisible
+  };
+  var defaultConfigOptions = {
+    initFocus,
+    initReconnect
+  };
+  var IS_SERVER = !hasWindow() || "Deno" in window;
+  var rAF = function(f2) {
+    return hasRequestAnimationFrame() ? window["requestAnimationFrame"](f2) : setTimeout(f2, 1);
+  };
+  var useIsomorphicLayoutEffect = IS_SERVER ? react.exports.useEffect : react.exports.useLayoutEffect;
+  var navigatorConnection = typeof navigator !== "undefined" && navigator.connection;
+  var slowConnection = !IS_SERVER && navigatorConnection && (["slow-2g", "2g"].includes(navigatorConnection.effectiveType) || navigatorConnection.saveData);
+  var serialize = function(key) {
+    if (isFunction(key)) {
+      try {
+        key = key();
+      } catch (err) {
+        key = "";
+      }
+    }
+    var args = [].concat(key);
+    key = typeof key == "string" ? key : (Array.isArray(key) ? key.length : key) ? stableHash(key) : "";
+    var infoKey = key ? "$swr$" + key : "";
+    return [key, args, infoKey];
+  };
+  var SWRGlobalState = /* @__PURE__ */ new WeakMap();
+  var FOCUS_EVENT = 0;
+  var RECONNECT_EVENT = 1;
+  var MUTATE_EVENT = 2;
+  var broadcastState = function(cache2, key, data2, error, isValidating, revalidate, broadcast) {
+    if (broadcast === void 0) {
+      broadcast = true;
+    }
+    var _a2 = SWRGlobalState.get(cache2), EVENT_REVALIDATORS = _a2[0], STATE_UPDATERS = _a2[1], FETCH = _a2[3];
+    var revalidators = EVENT_REVALIDATORS[key];
+    var updaters = STATE_UPDATERS[key];
+    if (broadcast && updaters) {
+      for (var i = 0; i < updaters.length; ++i) {
+        updaters[i](data2, error, isValidating);
+      }
+    }
+    if (revalidate) {
+      delete FETCH[key];
+      if (revalidators && revalidators[0]) {
+        return revalidators[0](MUTATE_EVENT).then(function() {
+          return cache2.get(key);
+        });
+      }
+    }
+    return cache2.get(key);
+  };
+  var __timestamp = 0;
+  var getTimestamp = function() {
+    return ++__timestamp;
+  };
+  var internalMutate = function() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+      args[_i] = arguments[_i];
+    }
+    return __awaiter(void 0, void 0, void 0, function() {
+      var cache2, _key, _data, _opts, options, populateCache, revalidate, rollbackOnError, customOptimisticData, _a2, key, keyInfo, _b, MUTATION, data2, error, beforeMutationTs, hasCustomOptimisticData, rollbackData, optimisticData, res;
+      return __generator(this, function(_c) {
+        switch (_c.label) {
+          case 0:
+            cache2 = args[0], _key = args[1], _data = args[2], _opts = args[3];
+            options = typeof _opts === "boolean" ? { revalidate: _opts } : _opts || {};
+            populateCache = isUndefined(options.populateCache) ? true : options.populateCache;
+            revalidate = options.revalidate !== false;
+            rollbackOnError = options.rollbackOnError !== false;
+            customOptimisticData = options.optimisticData;
+            _a2 = serialize(_key), key = _a2[0], keyInfo = _a2[2];
+            if (!key)
+              return [2];
+            _b = SWRGlobalState.get(cache2), MUTATION = _b[2];
+            if (args.length < 3) {
+              return [2, broadcastState(cache2, key, cache2.get(key), UNDEFINED, UNDEFINED, revalidate, true)];
+            }
+            data2 = _data;
+            beforeMutationTs = getTimestamp();
+            MUTATION[key] = [beforeMutationTs, 0];
+            hasCustomOptimisticData = !isUndefined(customOptimisticData);
+            rollbackData = cache2.get(key);
+            if (hasCustomOptimisticData) {
+              optimisticData = isFunction(customOptimisticData) ? customOptimisticData(rollbackData) : customOptimisticData;
+              cache2.set(key, optimisticData);
+              broadcastState(cache2, key, optimisticData);
+            }
+            if (isFunction(data2)) {
+              try {
+                data2 = data2(cache2.get(key));
+              } catch (err) {
+                error = err;
+              }
+            }
+            if (!(data2 && isFunction(data2.then)))
+              return [3, 2];
+            return [
+              4,
+              data2.catch(function(err) {
+                error = err;
+              })
+            ];
+          case 1:
+            data2 = _c.sent();
+            if (beforeMutationTs !== MUTATION[key][0]) {
+              if (error)
+                throw error;
+              return [2, data2];
+            } else if (error && hasCustomOptimisticData && rollbackOnError) {
+              populateCache = true;
+              data2 = rollbackData;
+              cache2.set(key, rollbackData);
+            }
+            _c.label = 2;
+          case 2:
+            if (populateCache) {
+              if (!error) {
+                if (isFunction(populateCache)) {
+                  data2 = populateCache(data2, rollbackData);
+                }
+                cache2.set(key, data2);
+              }
+              cache2.set(keyInfo, mergeObjects(cache2.get(keyInfo), { error }));
+            }
+            MUTATION[key][1] = getTimestamp();
+            return [
+              4,
+              broadcastState(cache2, key, data2, error, UNDEFINED, revalidate, !!populateCache)
+            ];
+          case 3:
+            res = _c.sent();
+            if (error)
+              throw error;
+            return [2, populateCache ? res : data2];
+        }
+      });
+    });
+  };
+  var revalidateAllKeys = function(revalidators, type) {
+    for (var key in revalidators) {
+      if (revalidators[key][0])
+        revalidators[key][0](type);
+    }
+  };
+  var initCache = function(provider, options) {
+    if (!SWRGlobalState.has(provider)) {
+      var opts = mergeObjects(defaultConfigOptions, options);
+      var EVENT_REVALIDATORS = {};
+      var mutate2 = internalMutate.bind(UNDEFINED, provider);
+      var unmount = noop;
+      SWRGlobalState.set(provider, [EVENT_REVALIDATORS, {}, {}, {}, mutate2]);
+      if (!IS_SERVER) {
+        var releaseFocus_1 = opts.initFocus(setTimeout.bind(UNDEFINED, revalidateAllKeys.bind(UNDEFINED, EVENT_REVALIDATORS, FOCUS_EVENT)));
+        var releaseReconnect_1 = opts.initReconnect(setTimeout.bind(UNDEFINED, revalidateAllKeys.bind(UNDEFINED, EVENT_REVALIDATORS, RECONNECT_EVENT)));
+        unmount = function() {
+          releaseFocus_1 && releaseFocus_1();
+          releaseReconnect_1 && releaseReconnect_1();
+          SWRGlobalState.delete(provider);
+        };
+      }
+      return [provider, mutate2, unmount];
+    }
+    return [provider, SWRGlobalState.get(provider)[4]];
+  };
+  var onErrorRetry = function(_, __, config, revalidate, opts) {
+    var maxRetryCount = config.errorRetryCount;
+    var currentRetryCount = opts.retryCount;
+    var timeout = ~~((Math.random() + 0.5) * (1 << (currentRetryCount < 8 ? currentRetryCount : 8))) * config.errorRetryInterval;
+    if (!isUndefined(maxRetryCount) && currentRetryCount > maxRetryCount) {
+      return;
+    }
+    setTimeout(revalidate, timeout, opts);
+  };
+  var _a = initCache(/* @__PURE__ */ new Map()), cache = _a[0], mutate = _a[1];
+  var defaultConfig = mergeObjects(
+    {
+      onLoadingSlow: noop,
+      onSuccess: noop,
+      onError: noop,
+      onErrorRetry,
+      onDiscarded: noop,
+      revalidateOnFocus: true,
+      revalidateOnReconnect: true,
+      revalidateIfStale: true,
+      shouldRetryOnError: true,
+      errorRetryInterval: slowConnection ? 1e4 : 5e3,
+      focusThrottleInterval: 5 * 1e3,
+      dedupingInterval: 2 * 1e3,
+      loadingTimeout: slowConnection ? 5e3 : 3e3,
+      compare: function(currentData, newData) {
+        return stableHash(currentData) == stableHash(newData);
+      },
+      isPaused: function() {
+        return false;
+      },
+      cache,
+      mutate,
+      fallback: {}
+    },
+    preset
+  );
+  var mergeConfigs = function(a, b) {
+    var v2 = mergeObjects(a, b);
+    if (b) {
+      var u1 = a.use, f1 = a.fallback;
+      var u2 = b.use, f2 = b.fallback;
+      if (u1 && u2) {
+        v2.use = u1.concat(u2);
+      }
+      if (f1 && f2) {
+        v2.fallback = mergeObjects(f1, f2);
+      }
+    }
+    return v2;
+  };
+  var SWRConfigContext = react.exports.createContext({});
+  var useStateWithDeps = function(state, unmountedRef) {
+    var rerender = react.exports.useState({})[1];
+    var stateRef = react.exports.useRef(state);
+    var stateDependenciesRef = react.exports.useRef({
+      data: false,
+      error: false,
+      isValidating: false
+    });
+    var setState = react.exports.useCallback(
+      function(payload) {
+        var shouldRerender = false;
+        var currentState = stateRef.current;
+        for (var _ in payload) {
+          var k2 = _;
+          if (currentState[k2] !== payload[k2]) {
+            currentState[k2] = payload[k2];
+            if (stateDependenciesRef.current[k2]) {
+              shouldRerender = true;
+            }
+          }
+        }
+        if (shouldRerender && !unmountedRef.current) {
+          rerender({});
+        }
+      },
+      []
+    );
+    useIsomorphicLayoutEffect(function() {
+      stateRef.current = state;
+    });
+    return [stateRef, stateDependenciesRef.current, setState];
+  };
+  var normalize = function(args) {
+    return isFunction(args[1]) ? [args[0], args[1], args[2] || {}] : [args[0], null, (args[1] === null ? args[2] : args[1]) || {}];
+  };
+  var useSWRConfig = function() {
+    return mergeObjects(defaultConfig, react.exports.useContext(SWRConfigContext));
+  };
+  var withArgs = function(hook) {
+    return function useSWRArgs() {
+      var args = [];
+      for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+      }
+      var fallbackConfig = useSWRConfig();
+      var _a2 = normalize(args), key = _a2[0], fn = _a2[1], _config = _a2[2];
+      var config = mergeConfigs(fallbackConfig, _config);
+      var next = hook;
+      var use = config.use;
+      if (use) {
+        for (var i = use.length; i-- > 0; ) {
+          next = use[i](next);
+        }
+      }
+      return next(key, fn || config.fetcher, config);
+    };
+  };
+  var subscribeCallback = function(key, callbacks, callback) {
+    var keyedRevalidators = callbacks[key] || (callbacks[key] = []);
+    keyedRevalidators.push(callback);
+    return function() {
+      var index = keyedRevalidators.indexOf(callback);
+      if (index >= 0) {
+        keyedRevalidators[index] = keyedRevalidators[keyedRevalidators.length - 1];
+        keyedRevalidators.pop();
+      }
+    };
+  };
+  var WITH_DEDUPE = { dedupe: true };
+  var useSWRHandler = function(_key, fetcher, config) {
+    var cache2 = config.cache, compare = config.compare, fallbackData = config.fallbackData, suspense = config.suspense, revalidateOnMount = config.revalidateOnMount, refreshInterval = config.refreshInterval, refreshWhenHidden = config.refreshWhenHidden, refreshWhenOffline = config.refreshWhenOffline;
+    var _a2 = SWRGlobalState.get(cache2), EVENT_REVALIDATORS = _a2[0], STATE_UPDATERS = _a2[1], MUTATION = _a2[2], FETCH = _a2[3];
+    var _b = serialize(_key), key = _b[0], fnArgs = _b[1], keyInfo = _b[2];
+    var initialMountedRef = react.exports.useRef(false);
+    var unmountedRef = react.exports.useRef(false);
+    var keyRef = react.exports.useRef(key);
+    var fetcherRef = react.exports.useRef(fetcher);
+    var configRef = react.exports.useRef(config);
+    var getConfig = function() {
+      return configRef.current;
+    };
+    var isActive = function() {
+      return getConfig().isVisible() && getConfig().isOnline();
+    };
+    var patchFetchInfo = function(info2) {
+      return cache2.set(keyInfo, mergeObjects(cache2.get(keyInfo), info2));
+    };
+    var cached = cache2.get(key);
+    var fallback = isUndefined(fallbackData) ? config.fallback[key] : fallbackData;
+    var data2 = isUndefined(cached) ? fallback : cached;
+    var info = cache2.get(keyInfo) || {};
+    var error = info.error;
+    var isInitialMount = !initialMountedRef.current;
+    var shouldRevalidate = function() {
+      if (isInitialMount && !isUndefined(revalidateOnMount))
+        return revalidateOnMount;
+      if (getConfig().isPaused())
+        return false;
+      if (suspense)
+        return isUndefined(data2) ? false : config.revalidateIfStale;
+      return isUndefined(data2) || config.revalidateIfStale;
+    };
+    var resolveValidating = function() {
+      if (!key || !fetcher)
+        return false;
+      if (info.isValidating)
+        return true;
+      return isInitialMount && shouldRevalidate();
+    };
+    var isValidating = resolveValidating();
+    var _c = useStateWithDeps({
+      data: data2,
+      error,
+      isValidating
+    }, unmountedRef), stateRef = _c[0], stateDependencies = _c[1], setState = _c[2];
+    var revalidate = react.exports.useCallback(
+      function(revalidateOpts) {
+        return __awaiter(void 0, void 0, void 0, function() {
+          var currentFetcher, newData, startAt, loading, opts, shouldStartNewRequest, isCurrentKeyMounted, cleanupState, newState, finishRequestAndUpdateState, mutationInfo, err_1;
+          var _a3;
+          return __generator(this, function(_b2) {
+            switch (_b2.label) {
+              case 0:
+                currentFetcher = fetcherRef.current;
+                if (!key || !currentFetcher || unmountedRef.current || getConfig().isPaused()) {
+                  return [2, false];
+                }
+                loading = true;
+                opts = revalidateOpts || {};
+                shouldStartNewRequest = !FETCH[key] || !opts.dedupe;
+                isCurrentKeyMounted = function() {
+                  return !unmountedRef.current && key === keyRef.current && initialMountedRef.current;
+                };
+                cleanupState = function() {
+                  var requestInfo = FETCH[key];
+                  if (requestInfo && requestInfo[1] === startAt) {
+                    delete FETCH[key];
+                  }
+                };
+                newState = { isValidating: false };
+                finishRequestAndUpdateState = function() {
+                  patchFetchInfo({ isValidating: false });
+                  if (isCurrentKeyMounted()) {
+                    setState(newState);
+                  }
+                };
+                patchFetchInfo({
+                  isValidating: true
+                });
+                setState({ isValidating: true });
+                _b2.label = 1;
+              case 1:
+                _b2.trys.push([1, 3, , 4]);
+                if (shouldStartNewRequest) {
+                  broadcastState(cache2, key, stateRef.current.data, stateRef.current.error, true);
+                  if (config.loadingTimeout && !cache2.get(key)) {
+                    setTimeout(function() {
+                      if (loading && isCurrentKeyMounted()) {
+                        getConfig().onLoadingSlow(key, config);
+                      }
+                    }, config.loadingTimeout);
+                  }
+                  FETCH[key] = [currentFetcher.apply(void 0, fnArgs), getTimestamp()];
+                }
+                _a3 = FETCH[key], newData = _a3[0], startAt = _a3[1];
+                return [4, newData];
+              case 2:
+                newData = _b2.sent();
+                if (shouldStartNewRequest) {
+                  setTimeout(cleanupState, config.dedupingInterval);
+                }
+                if (!FETCH[key] || FETCH[key][1] !== startAt) {
+                  if (shouldStartNewRequest) {
+                    if (isCurrentKeyMounted()) {
+                      getConfig().onDiscarded(key);
+                    }
+                  }
+                  return [2, false];
+                }
+                patchFetchInfo({
+                  error: UNDEFINED
+                });
+                newState.error = UNDEFINED;
+                mutationInfo = MUTATION[key];
+                if (!isUndefined(mutationInfo) && (startAt <= mutationInfo[0] || startAt <= mutationInfo[1] || mutationInfo[1] === 0)) {
+                  finishRequestAndUpdateState();
+                  if (shouldStartNewRequest) {
+                    if (isCurrentKeyMounted()) {
+                      getConfig().onDiscarded(key);
+                    }
+                  }
+                  return [2, false];
+                }
+                if (!compare(stateRef.current.data, newData)) {
+                  newState.data = newData;
+                } else {
+                  newState.data = stateRef.current.data;
+                }
+                if (!compare(cache2.get(key), newData)) {
+                  cache2.set(key, newData);
+                }
+                if (shouldStartNewRequest) {
+                  if (isCurrentKeyMounted()) {
+                    getConfig().onSuccess(newData, key, config);
+                  }
+                }
+                return [3, 4];
+              case 3:
+                err_1 = _b2.sent();
+                cleanupState();
+                if (!getConfig().isPaused()) {
+                  patchFetchInfo({ error: err_1 });
+                  newState.error = err_1;
+                  if (shouldStartNewRequest && isCurrentKeyMounted()) {
+                    getConfig().onError(err_1, key, config);
+                    if (typeof config.shouldRetryOnError === "boolean" && config.shouldRetryOnError || isFunction(config.shouldRetryOnError) && config.shouldRetryOnError(err_1)) {
+                      if (isActive()) {
+                        getConfig().onErrorRetry(err_1, key, config, revalidate, {
+                          retryCount: (opts.retryCount || 0) + 1,
+                          dedupe: true
+                        });
+                      }
+                    }
+                  }
+                }
+                return [3, 4];
+              case 4:
+                loading = false;
+                finishRequestAndUpdateState();
+                if (isCurrentKeyMounted() && shouldStartNewRequest) {
+                  broadcastState(cache2, key, newState.data, newState.error, false);
+                }
+                return [2, true];
+            }
+          });
+        });
+      },
+      [key]
+    );
+    var boundMutate = react.exports.useCallback(
+      internalMutate.bind(UNDEFINED, cache2, function() {
+        return keyRef.current;
+      }),
+      []
+    );
+    useIsomorphicLayoutEffect(function() {
+      fetcherRef.current = fetcher;
+      configRef.current = config;
+    });
+    useIsomorphicLayoutEffect(function() {
+      if (!key)
+        return;
+      var keyChanged = key !== keyRef.current;
+      var softRevalidate = revalidate.bind(UNDEFINED, WITH_DEDUPE);
+      var onStateUpdate = function(updatedData, updatedError, updatedIsValidating) {
+        setState(mergeObjects(
+          {
+            error: updatedError,
+            isValidating: updatedIsValidating
+          },
+          compare(stateRef.current.data, updatedData) ? UNDEFINED : {
+            data: updatedData
+          }
+        ));
+      };
+      var nextFocusRevalidatedAt = 0;
+      var onRevalidate = function(type) {
+        if (type == FOCUS_EVENT) {
+          var now = Date.now();
+          if (getConfig().revalidateOnFocus && now > nextFocusRevalidatedAt && isActive()) {
+            nextFocusRevalidatedAt = now + getConfig().focusThrottleInterval;
+            softRevalidate();
+          }
+        } else if (type == RECONNECT_EVENT) {
+          if (getConfig().revalidateOnReconnect && isActive()) {
+            softRevalidate();
+          }
+        } else if (type == MUTATE_EVENT) {
+          return revalidate();
+        }
+        return;
+      };
+      var unsubUpdate = subscribeCallback(key, STATE_UPDATERS, onStateUpdate);
+      var unsubEvents = subscribeCallback(key, EVENT_REVALIDATORS, onRevalidate);
+      unmountedRef.current = false;
+      keyRef.current = key;
+      initialMountedRef.current = true;
+      if (keyChanged) {
+        setState({
+          data: data2,
+          error,
+          isValidating
+        });
+      }
+      if (shouldRevalidate()) {
+        if (isUndefined(data2) || IS_SERVER) {
+          softRevalidate();
+        } else {
+          rAF(softRevalidate);
+        }
+      }
+      return function() {
+        unmountedRef.current = true;
+        unsubUpdate();
+        unsubEvents();
+      };
+    }, [key, revalidate]);
+    useIsomorphicLayoutEffect(function() {
+      var timer;
+      function next() {
+        var interval = isFunction(refreshInterval) ? refreshInterval(data2) : refreshInterval;
+        if (interval && timer !== -1) {
+          timer = setTimeout(execute, interval);
+        }
+      }
+      function execute() {
+        if (!stateRef.current.error && (refreshWhenHidden || getConfig().isVisible()) && (refreshWhenOffline || getConfig().isOnline())) {
+          revalidate(WITH_DEDUPE).then(next);
+        } else {
+          next();
+        }
+      }
+      next();
+      return function() {
+        if (timer) {
+          clearTimeout(timer);
+          timer = -1;
+        }
+      };
+    }, [refreshInterval, refreshWhenHidden, refreshWhenOffline, revalidate]);
+    react.exports.useDebugValue(data2);
+    if (suspense && isUndefined(data2) && key) {
+      fetcherRef.current = fetcher;
+      configRef.current = config;
+      unmountedRef.current = false;
+      throw isUndefined(error) ? revalidate(WITH_DEDUPE) : error;
+    }
+    return {
+      mutate: boundMutate,
+      get data() {
+        stateDependencies.data = true;
+        return data2;
+      },
+      get error() {
+        stateDependencies.error = true;
+        return error;
+      },
+      get isValidating() {
+        stateDependencies.isValidating = true;
+        return isValidating;
+      }
+    };
+  };
+  var useSWR = withArgs(useSWRHandler);
+  const setting$1 = "_setting_1tdcp_1";
+  const close = "_close_1tdcp_16";
+  const white = "_white_1tdcp_25";
+  const black = "_black_1tdcp_26";
+  const textarea = "_textarea_1tdcp_36";
+  const footer = "_footer_1tdcp_53";
+  const saveBtn = "_saveBtn_1tdcp_59";
   const styles$2 = {
-    item,
-    imgWrap,
-    top,
-    bottom,
-    title
+    setting: setting$1,
+    close,
+    white,
+    black,
+    textarea,
+    footer,
+    saveBtn
   };
   var jsxRuntime = { exports: {} };
   var reactJsxRuntime_production_min = {};
@@ -9471,8 +10241,89 @@ var __publicField = (obj, key, value) => {
   const Fragment = jsxRuntime.exports.Fragment;
   const jsx = jsxRuntime.exports.jsx;
   const jsxs = jsxRuntime.exports.jsxs;
+  const SettingPage = (props) => {
+    const [white2, setWhite] = react.exports.useState(videoManager.whiteText);
+    const [black2, setBlack] = react.exports.useState(videoManager.blackText);
+    const handleSave = async () => {
+      videoManager.setWhiteText(white2);
+      videoManager.setBlackText(black2);
+      videoManager.updateList();
+      mutate("videoList", videoManager.list);
+    };
+    return /* @__PURE__ */ jsxs("div", {
+      className: styles$2.setting,
+      children: [/* @__PURE__ */ jsx("a", {
+        className: styles$2.close,
+        onClick: props.onClose,
+        children: "ESC"
+      }), /* @__PURE__ */ jsxs("div", {
+        className: styles$2.black,
+        children: [/* @__PURE__ */ jsx("h3", {
+          children: "\u9ED1\u540D\u5355"
+        }), /* @__PURE__ */ jsx("div", {
+          className: styles$2.textarea,
+          children: /* @__PURE__ */ jsx("textarea", {
+            name: "boring-blacklist",
+            rows: 8,
+            value: black2,
+            onChange: (e) => setBlack(e.target.value)
+          })
+        })]
+      }), /* @__PURE__ */ jsxs("div", {
+        className: styles$2.white,
+        children: [/* @__PURE__ */ jsx("h3", {
+          children: "\u767D\u540D\u5355"
+        }), /* @__PURE__ */ jsx("div", {
+          className: styles$2.textarea,
+          children: /* @__PURE__ */ jsx("textarea", {
+            name: "boring-whitelist",
+            rows: 5,
+            value: white2,
+            onChange: (e) => setWhite(e.target.value)
+          })
+        })]
+      }), /* @__PURE__ */ jsx("div", {
+        className: styles$2.footer,
+        children: /* @__PURE__ */ jsx("button", {
+          className: styles$2.saveBtn,
+          onClick: handleSave,
+          children: "\u4FDD\u5B58"
+        })
+      })]
+    });
+  };
+  const usePage = (list, pageSize) => {
+    const [index, setIndex] = react.exports.useState(0);
+    pageSize = Math.floor(Math.max(1, pageSize));
+    const slice = (() => {
+      if (list.length <= pageSize)
+        return list;
+      const temp = list.slice(index, index + pageSize);
+      const rest = list.slice(0, pageSize - temp.length);
+      return temp.concat(rest);
+    })();
+    const onPrev = (step = 1) => setIndex((i) => (i + list.length - step) % list.length);
+    const onNext = (step = 1) => setIndex((i) => (i + step) % list.length);
+    return {
+      slice,
+      onPrev,
+      onNext
+    };
+  };
+  const item = "_item_16d2x_1";
+  const imgWrap = "_imgWrap_16d2x_12";
+  const top = "_top_16d2x_29";
+  const bottom = "_bottom_16d2x_30";
+  const title = "_title_16d2x_63";
+  const styles$1 = {
+    item,
+    imgWrap,
+    top,
+    bottom,
+    title
+  };
   const VideoItem = (props) => {
-    var _a, _b;
+    var _a2, _b;
     const {
       item: item2,
       tabIndex = 1,
@@ -9480,7 +10331,7 @@ var __publicField = (obj, key, value) => {
       onDelete
     } = props;
     return /* @__PURE__ */ jsxs("a", {
-      className: styles$2.item,
+      className: styles$1.item,
       tabIndex,
       onClick,
       onKeyDown: (e) => {
@@ -9490,88 +10341,79 @@ var __publicField = (obj, key, value) => {
           return onDelete();
       },
       children: [/* @__PURE__ */ jsxs("div", {
-        className: styles$2.imgWrap,
+        className: styles$1.imgWrap,
         children: [/* @__PURE__ */ jsx("img", {
-          src: item2.pic,
+          src: item2.pic.replace("http:", ""),
           alt: item2.title
         }), /* @__PURE__ */ jsxs("div", {
-          className: styles$2.top,
-          children: [/* @__PURE__ */ jsxs("span", {
-            title: (_a = item2.owner) == null ? void 0 : _a.name,
-            children: [/* @__PURE__ */ jsx("svg", {
-              children: /* @__PURE__ */ jsx("use", {
-                xlinkHref: "#widget-up"
-              })
-            }), (_b = item2.owner) == null ? void 0 : _b.name]
+          className: styles$1.top,
+          children: [/* @__PURE__ */ jsx("span", {
+            title: (_a2 = item2.owner) == null ? void 0 : _a2.name,
+            children: (_b = item2.owner) == null ? void 0 : _b.name
           }), /* @__PURE__ */ jsx("span", {
             children: parseDate(item2.pubdate)
           })]
         }), /* @__PURE__ */ jsx("div", {
-          className: styles$2.bottom,
+          className: styles$1.bottom,
           children: /* @__PURE__ */ jsx("span", {
             children: parseDuration(item2.duration)
           })
         })]
       }), /* @__PURE__ */ jsx("div", {
-        className: styles$2.title,
+        className: styles$1.title,
         title: item2.title,
         children: item2.title
       })]
     });
   };
-  const container = "_container_1lx5e_1";
-  const leftBtn = "_leftBtn_1lx5e_14";
-  const rightBtn = "_rightBtn_1lx5e_15";
-  const setting$1 = "_setting_1lx5e_48";
-  const content = "_content_1lx5e_72";
-  const styles$1 = {
+  const container = "_container_41r3g_1";
+  const leftBtn = "_leftBtn_41r3g_14";
+  const rightBtn = "_rightBtn_41r3g_15";
+  const setting = "_setting_41r3g_61";
+  const content = "_content_41r3g_85";
+  const styles = {
     container,
     leftBtn,
     rightBtn,
-    setting: setting$1,
+    setting,
     content
   };
   const VideoPage = (props) => {
-    const [list, setList] = react.exports.useState(videoManager.list);
-    const [isPending, startTransition] = react.exports.useTransition();
+    const {
+      data: list = [],
+      mutate: mutate2
+    } = useSWR("videoList", () => videoManager.list);
     const contentRef = react.exports.useRef(null);
     useHotkeys("Tab", {
       once: true,
       onClick: () => {
         setTimeout(() => {
-          var _a;
-          (_a = contentRef.current.firstElementChild) == null ? void 0 : _a.focus();
+          var _a2;
+          (_a2 = contentRef.current.firstElementChild) == null ? void 0 : _a2.focus();
         }, 50);
       }
     });
-    react.exports.useEffect(() => {
-      startTransition(() => {
-        videoManager.update().then(() => setList(videoManager.list));
-      });
-    }, []);
     const {
       slice,
       onPrev,
       onNext
     } = usePage(list, 6);
-    if (isPending)
-      return null;
     const handleDelete = (bvid, index) => {
       videoManager.getByBvid(bvid);
-      setList(videoManager.list);
+      mutate2();
       setTimeout(() => {
-        var _a;
-        (_a = contentRef.current.children[index]) == null ? void 0 : _a.focus();
+        var _a2;
+        (_a2 = contentRef.current.children[index]) == null ? void 0 : _a2.focus();
       }, 0);
     };
     return /* @__PURE__ */ jsxs("div", {
-      className: styles$1.container,
+      className: styles.container,
       children: [/* @__PURE__ */ jsx("button", {
-        className: styles$1.leftBtn,
+        className: styles.leftBtn,
         tabIndex: 1,
         onClick: () => onPrev(6)
       }), /* @__PURE__ */ jsxs("div", {
-        className: styles$1.content,
+        className: styles.content,
         ref: contentRef,
         children: [slice.map((item2, index) => /* @__PURE__ */ jsx(VideoItem, {
           item: item2,
@@ -9579,68 +10421,26 @@ var __publicField = (obj, key, value) => {
           onClick: () => playVideoItem(item2.bvid),
           onDelete: () => handleDelete(item2.bvid, index)
         }, item2.bvid)), /* @__PURE__ */ jsxs("div", {
-          className: styles$1.setting,
+          className: styles.setting,
           children: [/* @__PURE__ */ jsxs("span", {
             children: ["\u5E93\u5B58\uFF1A", list.length]
           }), /* @__PURE__ */ jsx("button", {
-            tabIndex: 3,
+            tabIndex: 2,
             onClick: async () => {
               await videoManager.refresh();
-              setList(videoManager.list);
+              mutate2();
             },
             children: "\u5237\u65B0"
           }), /* @__PURE__ */ jsx("button", {
-            tabIndex: 3,
+            tabIndex: 2,
             onClick: props.onSetting,
             children: "\u8BBE\u7F6E"
           })]
         })]
       }), /* @__PURE__ */ jsx("button", {
-        className: styles$1.rightBtn,
-        tabIndex: 2,
+        className: styles.rightBtn,
+        tabIndex: 1,
         onClick: () => onNext(6)
-      })]
-    });
-  };
-  const setting = "_setting_rqdad_1";
-  const textarea = "_textarea_rqdad_13";
-  const styles = {
-    setting,
-    textarea
-  };
-  const SettingPage = () => {
-    const [white, setWhite] = react.exports.useState(videoManager.whiteText);
-    const [black, setBlack] = react.exports.useState(videoManager.blackText);
-    react.exports.useEffect(() => videoManager.setWhiteText(white), [white]);
-    react.exports.useEffect(() => videoManager.setBlackText(black), [black]);
-    return /* @__PURE__ */ jsxs("div", {
-      className: styles.setting,
-      children: [/* @__PURE__ */ jsxs("div", {
-        className: styles.white,
-        children: [/* @__PURE__ */ jsx("h3", {
-          children: "\u767D\u540D\u5355"
-        }), /* @__PURE__ */ jsx("div", {
-          className: styles.textarea,
-          children: /* @__PURE__ */ jsx("textarea", {
-            name: "boring-whitelist",
-            rows: 5,
-            value: white,
-            onChange: (e) => setWhite(e.target.value)
-          })
-        })]
-      }), /* @__PURE__ */ jsxs("div", {
-        className: styles.black,
-        children: [/* @__PURE__ */ jsx("h3", {
-          children: "\u9ED1\u540D\u5355"
-        }), /* @__PURE__ */ jsx("div", {
-          className: styles.textarea,
-          children: /* @__PURE__ */ jsx("textarea", {
-            name: "boring-blacklist",
-            rows: 10,
-            value: black,
-            onChange: (e) => setBlack(e.target.value)
-          })
-        })]
       })]
     });
   };
@@ -9663,10 +10463,19 @@ var __publicField = (obj, key, value) => {
           autoPlayVideo();
       }
     });
+    useHotkeys(["Delete", "Meta+Backspace", "Ctrl+Backspace"], {
+      enabled: !video && !setting2 && isVideoPage,
+      onClick: async () => {
+        const item2 = await videoManager.tryNext(5);
+        playVideoItem(item2 == null ? void 0 : item2.bvid);
+      }
+    });
     return /* @__PURE__ */ jsxs(Fragment, {
       children: [video && /* @__PURE__ */ jsx(VideoPage, {
         onSetting: () => setSetting(true)
-      }), setting2 && /* @__PURE__ */ jsx(SettingPage, {})]
+      }), setting2 && /* @__PURE__ */ jsx(SettingPage, {
+        onClose: () => setSetting(false)
+      })]
     });
   };
   setupDefault();
