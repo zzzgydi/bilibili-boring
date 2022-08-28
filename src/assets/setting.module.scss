@@ -54,3 +54,27 @@
     background: transparent;
   }
 }
+
+.footer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .saveBtn {
+    color: #000;
+    padding: 4px 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fdfdfd;
+    overflow: hidden;
+
+    &:active,
+    &:focus {
+      background: #fff;
+      border-color: #aaa;
+      outline: auto;
+    }
+  }
+}

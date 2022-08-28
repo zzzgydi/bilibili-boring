@@ -16,8 +16,6 @@ class VideoManager {
   private _whitelist: IFilterItem[] = [];
   private _blacklist: IFilterItem[] = [];
 
-  private _shouldFilter = false;
-
   constructor() {
     this._whiteText = SWhitelistText.get();
     this._blackText = SBlacklistText.get();
@@ -32,12 +30,6 @@ class VideoManager {
 
     // 太少了就加一点
     if (list.length < 12) this.refresh();
-  }
-
-  async update() {
-    const list = SVideoList.get();
-    if (list.length < 12) await this.refresh();
-    return SVideoList.get();
   }
 
   // 从storage里取一个视频
@@ -117,17 +109,11 @@ class VideoManager {
       .filter((e) => e && e.bvid && !itemSet.has(e.bvid))
       .filter(this.rulesFilter.bind(this)) as IVideoItem[];
 
-    this._shouldFilter = false;
     SVideoList.set(shuffleList(list.concat(items)));
   }
 
   get list() {
-    const list = SVideoList.get().filter((e) => e && e.bvid);
-    if (this._shouldFilter) {
-      this._shouldFilter = false;
-      return list.filter(this.rulesFilter.bind(this));
-    }
-    return list;
+    return SVideoList.get().filter((e) => e && e.bvid);
   }
 
   get whiteText() {
@@ -143,7 +129,6 @@ class VideoManager {
     SWhitelistText.set(value);
     this._whiteText = value;
     this._whitelist = generateFilters(this._whiteText);
-    this._shouldFilter = true;
   }
 
   setBlackText(value: string) {
@@ -151,7 +136,10 @@ class VideoManager {
     SBlacklistText.set(value);
     this._blackText = value;
     this._blacklist = generateFilters(this._blackText);
-    this._shouldFilter = true;
+  }
+
+  updateList() {
+    SVideoList.set(this.list.filter(this.rulesFilter.bind(this)));
   }
 
   private rulesFilter(item: IVideoItem | null) {

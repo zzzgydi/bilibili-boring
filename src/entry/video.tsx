@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState, useTransition } from "react";
+import useSWR from "swr";
+import { useRef } from "react";
 import { useHotkeys } from "@/hooks/use-hotkeys";
 import { usePage } from "@/hooks/use-page";
 import { videoManager } from "@/services/video";
@@ -7,8 +8,10 @@ import VideoItem from "@/components/video-item";
 import styles from "@/assets/entry.module.scss";
 
 const VideoPage = (props: { onSetting: () => void }) => {
-  const [list, setList] = useState(videoManager.list);
-  const [isPending, startTransition] = useTransition();
+  const { data: list = [], mutate } = useSWR(
+    "videoList",
+    () => videoManager.list
+  );
 
   const contentRef = useRef<HTMLDivElement>(null!);
   useHotkeys("Tab", {
@@ -20,19 +23,11 @@ const VideoPage = (props: { onSetting: () => void }) => {
     },
   });
 
-  useEffect(() => {
-    startTransition(() => {
-      videoManager.update().then(() => setList(videoManager.list));
-    });
-  }, []);
-
   const { slice, onPrev, onNext } = usePage(list, 6);
-
-  if (isPending) return null;
 
   const handleDelete = (bvid: string, index: number) => {
     videoManager.getByBvid(bvid); // 删掉
-    setList(videoManager.list);
+    mutate();
     setTimeout(() => {
       (contentRef.current.children[index] as HTMLElement)?.focus();
     }, 0);
@@ -63,7 +58,7 @@ const VideoPage = (props: { onSetting: () => void }) => {
             tabIndex={2}
             onClick={async () => {
               await videoManager.refresh();
-              setList(videoManager.list);
+              mutate();
             }}
           >
             刷新

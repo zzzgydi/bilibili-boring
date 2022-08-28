@@ -1,4 +1,5 @@
-import { useDeferredValue, useEffect, useState } from "react";
+import { mutate } from "swr";
+import { useState } from "react";
 import { videoManager } from "@/services/video";
 import styles from "@/assets/setting.module.scss";
 
@@ -6,11 +7,12 @@ const SettingPage = (props: { onClose: () => void }) => {
   const [white, setWhite] = useState(videoManager.whiteText);
   const [black, setBlack] = useState(videoManager.blackText);
 
-  const defferdWhite = useDeferredValue(white);
-  const defferdBlack = useDeferredValue(black);
-
-  useEffect(() => videoManager.setWhiteText(defferdWhite), [defferdWhite]);
-  useEffect(() => videoManager.setBlackText(defferdBlack), [defferdBlack]);
+  const handleSave = async () => {
+    videoManager.setWhiteText(white);
+    videoManager.setBlackText(black);
+    videoManager.updateList();
+    mutate("videoList", videoManager.list);
+  };
 
   return (
     <div className={styles.setting}>
@@ -41,6 +43,12 @@ const SettingPage = (props: { onClose: () => void }) => {
             onChange={(e) => setWhite(e.target.value)}
           />
         </div>
+      </div>
+
+      <div className={styles.footer}>
+        <button className={styles.saveBtn} onClick={handleSave}>
+          保存
+        </button>
       </div>
     </div>
   );
